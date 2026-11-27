@@ -1,0 +1,8 @@
+# Research inputs and local delivery packages
+/models/
+/private/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
