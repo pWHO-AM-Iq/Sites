@@ -81,7 +81,23 @@
       "trainable": 21896248,
       "frozen": 0
     },
-    "architectureRelationship": "Project implementation and adapters preserving the pinned Ultralytics YOLO26m topology"
+    "architectureRelationship": "Project implementation and adapters preserving the pinned Ultralytics YOLO26m topology",
+    "architectureChange": {
+      "conversationSource": "User-supplied report with excerpts from the original Codex conversations on the training PC",
+      "initialRequestAt": "2026-11-03T22:34:44+09:00",
+      "initialRequest": "Build a custom YOLO-like detector at approximately YOLO26m scale, with NMS and NMS-free detection.",
+      "rebuildRequestedAt": "2026-11-04T13:17:58+09:00",
+      "rebuildRequest": "Stop the previous training, reproduce YOLO26 for both input sizes using the paper or code analysis, and start training the 640 version.",
+      "implementationChoiceAt": "2026-11-04T13:18:03+09:00",
+      "implementationChoice": "Codex chose to examine the official code and reconstruct the architecture, loss and training method.",
+      "previousRun": {
+        "runId": "custom_m_coco_20261104_005740",
+        "architecture": "CSP-based detector",
+        "completedEpochs": 88,
+        "checkpointSha256": "6ebc5bb07909912c389840fcbf79a13bd290344a4d1284c9b39d9fc26a613d50",
+        "checkpointVerification": "File hashed on the training PC per the supplied report. The hash and epoch match the archived evidence/CURRENT_REBUILD.json."
+      }
+    }
   },
   "metric": {
     "task": "COCO bbox",
