@@ -109,7 +109,7 @@ def build_backend(args, model):
     torch.set_num_interop_threads(1)
     device = torch.device("cpu" if args.backend == "torch-cpu" else f"cuda:{args.gpu}")
     dtype = torch.float16 if args.backend == "torch-fp16" else torch.float32
-    detector = load_torch_model(model, args.mode).eval().to(device=device, dtype=dtype)
+    detector = load_torch_model(model, args.mode, device=device).to(dtype=dtype)
     if device.type == "cuda":
         torch.backends.cuda.matmul.allow_tf32 = False
         torch.backends.cudnn.allow_tf32 = False
@@ -117,9 +117,11 @@ def build_backend(args, model):
 
     @torch.inference_mode()
     def forward(tensor):
-        input_tensor = torch.from_numpy(tensor).to(device=device, dtype=dtype)
-        boxes, logits = detector(input_tensor)
-        return boxes.float().cpu().numpy(), logits.float().sigmoid().cpu().numpy()
+        input_tensor = torch.from_numpy(tensor).to(device=device, dtype=dtype,
+                                                  memory_format=torch.channels_last)
+        result = detector(input_tensor, branch=args.mode)[args.mode]
+        return (result["boxes"].float().cpu().numpy(),
+                result["logits"].float().sigmoid().cpu().numpy())
 
     def memory():
         if device.type == "cuda":
@@ -130,6 +132,7 @@ def build_backend(args, model):
     return forward, {"version": torch.__version__, "device": str(device),
                      "gpu_name": torch.cuda.get_device_name(device) if device.type == "cuda" else None,
                      "cuda_version": torch.version.cuda, "precision": str(dtype),
+                     "tf32_allowed": False if device.type == "cuda" else None,
                      "transfer_in_forward": True}, memory
 
 
@@ -161,6 +164,34 @@ def benchmark(samples, execute, warmup, iterations):
         timings.append(timing)
     return summarize(timings) | {"repeat_output_mismatches": mismatches,
                                   "unique_inputs": len(expected), "sample_detections": outputs}
+
+
+def raw_onnx_parity(args, samples, forward):
+    reference_path = args.models / f"custom_detector_{args.mode}.onnx"
+    reference_args = argparse.Namespace(**(vars(args) | {"backend": "ort-cpu"}))
+    reference, _, _ = build_backend(reference_args, reference_path)
+    box_deltas = []
+    score_deltas = []
+    for _, blob in samples:
+        tensor, _, _ = preprocess(decode_image(blob))
+        boxes, scores = forward(tensor)
+        onnx_boxes, onnx_scores = reference(tensor)
+        for result, expected, deltas in ((boxes, onnx_boxes, box_deltas),
+                                         (scores, onnx_scores, score_deltas)):
+            if result.shape != expected.shape or not np.isfinite(result).all():
+                raise ValueError("Invalid output during raw PyTorch/ONNX parity")
+            deltas.append(np.abs(result - expected).ravel())
+
+    def describe(deltas):
+        values = np.concatenate(deltas)
+        return {"mean": float(values.mean()), "p99": float(np.percentile(values, 99)),
+                "max": float(values.max())}
+
+    with reference_path.open("rb") as artifact:
+        reference_sha = hashlib.file_digest(artifact, "sha256").hexdigest()
+    return {"images": len(samples), "reference_sha256": reference_sha,
+            "box_coordinate_abs_delta_model_pixels": describe(box_deltas),
+            "class_probability_abs_delta": describe(score_deltas)}
 
 
 def summarize(timings):
@@ -294,6 +325,12 @@ def run(args):
         result["rss_bytes_at_end"] = process.memory_info().rss
         result["device_memory"] = backend_memory()
         result["status"] = "completed"
+        if args.raw_onnx_parity:
+            try:
+                result["raw_onnx_cpu_parity"] = raw_onnx_parity(args, samples, forward)
+            except Exception as error:
+                result["raw_onnx_cpu_parity"] = {"status": "failed",
+                                                 "reason": f"{type(error).__name__}: {error}"}
     except Exception as error:
         result["status"] = "failed"
         result["reason"] = f"{type(error).__name__}: {error}"
@@ -318,9 +355,13 @@ def main():
     parser.add_argument("--iterations", type=int, default=100)
     parser.add_argument("--gpu", type=int, default=0)
     parser.add_argument("--compatibility", action="store_true")
+    parser.add_argument("--raw-onnx-parity", action="store_true",
+                        help="Compare raw PyTorch outputs with ONNX CPU after timing")
     args = parser.parse_args()
     if min(args.threads, args.samples, args.iterations) < 1 or args.warmup < 0 or args.gpu < 0:
         parser.error("Expected positive threads/samples/iterations and nonnegative warmup/GPU")
+    if args.raw_onnx_parity and not args.backend.startswith("torch"):
+        parser.error("--raw-onnx-parity requires a PyTorch backend")
     return run(args)
 
 

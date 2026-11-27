@@ -42,7 +42,7 @@ def compare(left, right):
                                                                                               confidence_delta)
         unmatched_right += len(available)
     return {"images": len(left), "matched_by_class_and_iou_0_5": paired,
-            "unmatched_cpu": unmatched_left, "unmatched_cuda": unmatched_right,
+            "unmatched_reference": unmatched_left, "unmatched_candidate": unmatched_right,
             "max_matched_coordinate_delta_px": max_coord_delta,
             "max_matched_score_delta": max_confidence_delta}
 
@@ -70,14 +70,24 @@ def main():
             if pair["backend"] == "ort-trt" and inventory.get("tensorrt_runtime_loadable") is False:
                 reports[name]["reason"] = "TensorRT runtime DLLs could not be resolved in the local environment."
     parity = {}
+    pytorch_parity = {}
     for mode in ("nms", "nms_free"):
         cpu = reports[f"ort-cpu-{mode}"]
         cuda = reports[f"ort-cuda-{mode}"]
         if cpu["status"] == cuda["status"] == "completed":
-            parity[mode] = compare(cpu, cuda)
+            compared = compare(cpu, cuda)
+            compared["unmatched_cpu"] = compared.pop("unmatched_reference")
+            compared["unmatched_cuda"] = compared.pop("unmatched_candidate")
+            parity[mode] = compared
+        if cpu["status"] == "completed":
+            for backend in ("torch-cpu", "torch-fp32", "torch-fp16"):
+                key = f"{backend}-{mode}"
+                if reports[key]["status"] == "completed":
+                    pytorch_parity[key] = compare(cpu, reports[key])
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps({"schema_version": 1, "runs": reports,
-                                       "cpu_cuda_parity": parity, "environment": inventory}, indent=2, allow_nan=False) + "\n",
+                                       "cpu_cuda_parity": parity, "pytorch_vs_onnx_cpu_parity": pytorch_parity,
+                                       "environment": inventory}, indent=2, allow_nan=False) + "\n",
                            encoding="utf-8")
 
 

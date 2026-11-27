@@ -1,0 +1,125 @@
+リポジトリの変更（A 追加、M 変更、D 削除、R 移動）
+A	.gitignore
+M	README.md
+A	main/.openai/hosting.json
+A	main/bench_view.py
+A	main/build.py
+A	main/catalog.py
+A	main/config.json
+A	main/dist/assets/crossing.jpg
+A	main/dist/assets/site.css
+A	main/dist/assets/site.js
+A	main/dist/benchmarks/index.html
+A	main/dist/data/accuracy.svg
+A	main/dist/data/class-ap.csv
+A	main/dist/data/class-ap.svg
+A	main/dist/data/coco-summary.csv
+A	main/dist/data/details.json
+A	main/dist/data/evaluation.json
+A	main/dist/data/example.json
+A	main/dist/data/latency-vs-ap.svg
+A	main/dist/data/latency.svg
+A	main/dist/data/operating-points.csv
+A	main/dist/data/parameters.svg
+A	main/dist/data/params-vs-ap.svg
+A	main/dist/data/pr-curve.svg
+A	main/dist/docs/index.html
+A	main/dist/en/benchmarks/index.html
+A	main/dist/en/docs/index.html
+A	main/dist/en/index.html
+A	main/dist/en/legal/index.html
+A	main/dist/en/models/detector/index.html
+A	main/dist/en/models/index.html
+A	main/dist/en/research/index.html
+A	main/dist/en/store/index.html
+A	main/dist/en/training/index.html
+A	main/dist/index.html
+A	main/dist/legal/index.html
+A	main/dist/models/detector/index.html
+A	main/dist/models/index.html
+A	main/dist/research/index.html
+A	main/dist/store/index.html
+A	main/dist/training/index.html
+A	product/PROJECT-REPORT.ja.md
+A	product/comparisons/README.md
+A	product/comparisons/local-control.json
+A	product/comparisons/local-control.md
+A	product/comparisons/official-baselines.json
+A	product/evaluation/README.md
+A	product/evaluation/artifact-audit.json
+A	product/evaluation/audit_artifacts.py
+A	product/evaluation/compare_formats.py
+A	product/evaluation/conversion-accuracy.json
+A	product/evaluation/origin-training.json
+A	product/evaluation/predict_coco.py
+A	product/evaluation/quality.json
+A	product/evaluation/run-record.json
+A	product/evaluation/runtime/README.md
+A	product/evaluation/runtime/benchmark.py
+A	product/evaluation/runtime/measurements.json
+A	product/evaluation/runtime/summarize.py
+A	product/evaluation/score_coco.py
+A	product/launch/README.md
+A	product/launch/assets/listing-en.png
+A	product/launch/assets/listing-ja.png
+A	product/launch/assets/render-listing.py
+A	product/launch/custom-training-operations.md
+A	product/launch/github/README.md
+A	product/launch/huggingface/README.md
+A	product/launch/listing-drafts.md
+A	product/launch/patent-search.md
+A	product/launch/platforms.md
+A	product/launch/posts/note.md
+A	product/launch/posts/qiita.md
+A	product/launch/posts/x.md
+A	product/launch/posts/zenn.md
+A	product/launch/rights-review.md
+A	product/materials/.gitignore
+A	product/materials/BENCHMARK.md
+A	product/materials/BENCHMARK.template.md
+A	product/materials/BUILD.md
+A	product/materials/CHANGELOG.md
+A	product/materials/MODEL_CARD.md
+A	product/materials/README.md
+A	product/materials/RIGHTS_STATUS.md
+A	product/materials/SPEC.en.md
+A	product/materials/SPEC.ja.md
+A	product/materials/SPEC.md
+A	product/materials/TRAINING_INTAKE.md
+A	product/materials/TRAINING_QUICKSTART.md
+A	product/materials/build_materials.py
+A	product/materials/build_packages.py
+A	product/materials/class-ap.csv
+A	product/materials/coco-summary.csv
+A	product/materials/detect_onnx.py
+A	product/materials/intake_dataset.py
+A	product/materials/models.csv
+A	product/materials/operating-points.csv
+A	product/materials/release.json
+A	product/materials/requirements-inference.txt
+A	product/materials/runtime.csv
+A	product/materials/templates/CHANGELOG.md
+A	product/materials/templates/MODEL_CARD.md
+A	product/materials/templates/README.md
+A	product/materials/templates/SPEC.md
+A	product/materials/templates/warm_start.py
+A	product/site/asset-record.md
+A	product/site/build_public_details.py
+A	product/site/make_example.py
+A	product/site/research-handoff.ja.txt
+A	product/site/review-version.json
+A	product/site/verify_site.py
+D	sites/.gitkeep
+A	product/changed-files.txt
+
+ローカル専用の納品物
+private/packages/custom-detector-commercial-draft.1.zip
+private/packages/custom-detector-custom-training-draft.1.zip
+private/packages/custom-detector-developer-draft.1.zip
+private/packages/custom-detector-standard-draft.1.zip
+private/packages/SHA256SUMS.txt
+private/site-preview/vision-model-lab-review.tar.gz
+private/launch-staging/github/
+private/launch-staging/huggingface/
+
+private/handoff/ と private/product-evaluation/ の原本コピー・中間ファイルは公開、配布、Git管理の対象外。

@@ -1,0 +1,21 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>ドキュメント — Vision Model Lab</title><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body><a class="skip" href="#content">本文へ</a><header><div class="wrap header-inner"><a class="brand" href="/"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Vision Model Lab</a><nav class="desktop"><a href="/models/">モデル</a><a href="/benchmarks/">性能評価</a><a href="/research/">研究</a><a href="/docs/" aria-current="page">ドキュメント</a></nav><div class="language"><a lang="ja" hreflang="ja" href="/docs/" class="selected">JP</a><span>/</span><a lang="en" hreflang="en" href="/en/docs/" class="">EN</a></div><details class="menu"><summary aria-label="メニュー"><span></span><span></span></summary><nav><a class="" href="/models/">モデル</a><a class="" href="/benchmarks/">性能評価</a><a class="" href="/research/">研究</a><a class="" href="/docs/">ドキュメント</a><a class="" href="/training/">受託学習</a><a class="" href="/store/">ストア</a><a class="" href="/legal/">法務情報</a></nav></details></div></header><main id="content"><section class="pagehead"><div class="wrap"><div class="topic"><span></span>DOCUMENTATION</div><h1>ドキュメント</h1><p>入力の準備から推論結果の読み取りまで。</p></div></section><div class="wrap entries"><section class="entry"><h2>導入と推論</h2><div><p>ONNX版のCPU推論ではPython環境にonnxruntime、numpy、pillowを用意します。配布候補のONNXを取得済みの場合の最小例です。画像をモデル入力へ変換した後、2つの出力を取得します。</p><pre><code>python -m venv .venv
+# Activate the environment, then:
+python -m pip install onnxruntime numpy pillow</code></pre>
+<pre><code>import onnxruntime as ort
+import numpy as np
+from PIL import Image
+
+image = Image.open("input.jpg").convert("RGB")
+w, h = image.size
+ratio = min(640 / w, 640 / h)
+nw, nh = max(1, round(w * ratio)), max(1, round(h * ratio))
+canvas = Image.new("RGB", (640, 640), (114, 114, 114))
+canvas.paste(image.resize((nw, nh), Image.Resampling.BILINEAR),
+             ((640 - nw) // 2, (640 - nh) // 2))
+tensor = np.asarray(canvas, dtype=np.float32).transpose(2, 0, 1)[None] / 255
+
+session = ort.InferenceSession(
+    "custom_detector_nms_free.onnx",
+    providers=["CPUExecutionProvider"],
+)
+boxes, scores = session.run(["boxes", "scores"], {"images": tensor})</code></pre></div></section><section class="entry"><h2>入力と出力</h2><div><div class="tablewrap" tabindex="0"><table><tbody><tr><th scope="row">タスク・学習データ</th><td>物体検出 · COCO 2017</td></tr><tr><th scope="row">入力</th><td>RGB · float32 · NCHW · [1, 3, 640, 640]</td></tr><tr><th scope="row">クラス・出力候補数</th><td>80 / 8,400</td></tr><tr><th scope="row">ONNX出力</th><td>boxes [1, 8400, 4] · scores [1, 8400, 80]</td></tr><tr><th scope="row">チェックポイント</th><td>NMS · epoch 195 / NMS-free · epoch 205</td></tr><tr><th scope="row">推論パラメータ数（各方式）</th><td>20,435,260</td></tr><tr><th scope="row">学習時の総数 / 学習可能パラメータ</th><td>21,896,248 / 21,896,248</td></tr><tr><th scope="row">計算量（Conv・MatMulのみ）</th><td>34.213 GMACs / 68.426 GFLOPs</td></tr><tr><th scope="row">ファイル形式</th><td>PyTorch (.pt) / ONNX (.onnx)</td></tr></tbody></table></div><p>RGB画像を縦横比を保って縮尺変更し、RGB 114の余白で中央に配置します。255で割ってNCHWに変換します。出力矩形から余白を引き、各軸の実リサイズ倍率で元画像に戻します。ONNXのscoresにはsigmoidが適用済みです。</p></div></section><section class="entry"><h2>ファインチューニングとFAQ</h2><div><p>元の学習コードはCOCO形式の注釈とクラス対応を読み込みます。追加学習では、対象ラベルを対応付け、学習・検証セットを分割し、出力ヘッドと初期化元を設定してから、保持した評価セットで確認します。受入上限と学習レシピは提供前の検証対象です。</p><details class="faq"><summary>GPUやFP16を利用できますか？</summary><p>プロバイダー、精度、実際のデバイスを性能評価ページで照合してください。</p></details><div class="linklist"><a class="" href="/benchmarks/">性能評価 ↗</a><a class="" href="/training/">受託学習 ↗</a></div></div></section></div></main><footer><div class="wrap footergrid"><div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Vision Model Lab</div><nav><a class="" href="/models/">モデル</a><a class="" href="/benchmarks/">性能評価</a><a class="" href="/training/">受託学習</a><a class="" href="/research/">研究</a><a class="" href="/docs/">ドキュメント</a><a class="" href="/store/">ストア</a><a class="" href="/legal/">法務情報</a></nav></div></footer></body></html>

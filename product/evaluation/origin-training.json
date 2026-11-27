@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "status": "verified-handoff-records",
+  "origin": {
+    "source": "Developer handoff archive, saved launch records, training source and final evaluation",
+    "runId": "yolo26m_coco640_20261104_134911",
+    "startedDate": "2026-11-04",
+    "finishedDate": "2026-11-06",
+    "trainingEpochs": 300,
+    "validationIntervalEpochs": 5,
+    "selection": "Peak COCO bbox AP for each branch on the development split; EMA weights",
+    "trainingSourceCommit": null,
+    "upstreamCommit": "ae725d5cb20c2d849b864cd34fc15f5c55f877a5",
+    "initialization": {
+      "type": "random",
+      "seed": 20261103,
+      "externalPretrainedWeights": false,
+      "resume": false,
+      "initialWeightsSha256": null,
+      "firstOptimizerUpdateEpoch": 1,
+      "detachedOneToOneBranchFeaturesDuringTraining": true
+    },
+    "training": {
+      "inputSize": [
+        640,
+        640
+      ],
+      "physicalBatch": 32,
+      "targetEffectiveBatch": 64,
+      "precision": "BF16",
+      "optimizer": "MuSGD",
+      "nominalGradientAccumulation": 2,
+      "firstOptimizerUpdateAccumulation": 1,
+      "emaCopyFrozen": true
+    },
+    "split": {
+      "training": {
+        "dataset": "COCO train2017",
+        "imageCount": 116287
+      },
+      "development": {
+        "dataset": "COCO train2017",
+        "imageCount": 2000
+      },
+      "final": {
+        "dataset": "COCO val2017",
+        "imageCount": 5000
+      },
+      "seed": 20261103,
+      "idsFileSha256": "aaa8e321c7358ef7af45b7a7e8ba442616ff2b15e927c8c0a92d8cde8b5f59be",
+      "pairwiseIdIntersectionCounts": [
+        0,
+        0,
+        0
+      ],
+      "orderedSplitListsEqualToLocalReconstruction": true,
+      "localAnnotationSha256": {
+        "instances_train2017.json": "610fce4944abdeb15354cc765333805529359d12d88f2f711393ca586901d01d",
+        "instances_val2017.json": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f"
+      }
+    },
+    "environment": {
+      "os": "Windows 11",
+      "accelerator": "NVIDIA GeForce RTX 5090",
+      "python": "3.12.0",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "cudaBuild": "12.8",
+      "pycocotools": "2.0.11"
+    },
+    "startedAt": "2026-11-04T13:49:11.590026+09:00",
+    "finishedAt": "2026-11-06T12:10:49+09:00",
+    "architectureId": "yolo26m_ae725d5",
+    "parameterCounts": {
+      "training": 21896248,
+      "shared": 18974272,
+      "nms_head": 1460988,
+      "nms_free_head": 1460988,
+      "nms_inference": 20435260,
+      "nms_free_inference": 20435260,
+      "trainable": 21896248,
+      "frozen": 0
+    },
+    "architectureRelationship": "Project implementation and adapters preserving the pinned Ultralytics YOLO26m topology"
+  },
+  "metric": {
+    "task": "COCO bbox",
+    "iouRange": [
+      0.5,
+      0.95
+    ],
+    "categoryCount": 80,
+    "units": "fraction"
+  },
+  "models": {
+    "nms": {
+      "selectedEpoch": 195,
+      "originDevelopmentAp": 0.5034101973644575,
+      "originFinalAp": 0.49168478924161396,
+      "localOnnxAp": 0.4852268512757772,
+      "originDevelopmentMetrics": {
+        "AP": 0.5034101973644575,
+        "AP50": 0.6813808001102309,
+        "AP75": 0.5485514307049281,
+        "AP_small": 0.3265284103141418,
+        "AP_medium": 0.5354694861576843,
+        "AP_large": 0.6846002313532644,
+        "AR1": 0.3809563274414772,
+        "AR10": 0.6282493863919174,
+        "AR100": 0.6752545041364058,
+        "AR_small": 0.4996579668654214,
+        "AR_medium": 0.7160290957304605,
+        "AR_large": 0.844589492706662
+      },
+      "originFinalMetrics": {
+        "AP": 0.49168478924161396,
+        "AP50": 0.6684241295033538,
+        "AP75": 0.5312256127494903,
+        "AP_small": 0.31494624553859835,
+        "AP_medium": 0.5421431904475362,
+        "AP_large": 0.6576532854302563,
+        "AR1": 0.3738912344965353,
+        "AR10": 0.6179303161369709,
+        "AR100": 0.6686316110939267,
+        "AR_small": 0.49241004457957266,
+        "AR_medium": 0.7243552915339764,
+        "AR_large": 0.8175095789887672
+      },
+      "originFinalPredictionCount": 545755,
+      "lineage": {
+        "trainingCheckpointSha256Recorded": "57c7779306e8c50ea1851c7dcee065bec076d2240330d00b85ed12ee19eca0a1",
+        "matchingExportedStateDictTensorsRecorded": 648,
+        "distributedPtSha256": "9a6045ec73c577c5aa868e41a2b8baa8ed9f6f0bda2c32abd3cfd106f8e55a4c",
+        "sourceOnnxSha256Recorded": "f9d6a30e5efa35311e26f63700547b5879c6dcef884f1db303b97520d0176390",
+        "distributedOnnxSha256": "33dc5f8085888ea27a32fed4731d34ace5a819cf35d525b7adec13bf40cda120",
+        "onnxGraphSha256": "3b5e042072f242f0b0cf648aae00004fdefdf997d6d81dc3c193ee19bed66b4b",
+        "originalCheckpointAndSourceOnnxIncluded": false
+      }
+    },
+    "nms_free": {
+      "selectedEpoch": 205,
+      "originDevelopmentAp": 0.4980775598742456,
+      "originFinalAp": 0.4870874326026218,
+      "localOnnxAp": 0.4875773421947616,
+      "originDevelopmentMetrics": {
+        "AP": 0.4980775598742456,
+        "AP50": 0.6720863901351974,
+        "AP75": 0.5449308064983276,
+        "AP_small": 0.3259284940141239,
+        "AP_medium": 0.533562350007849,
+        "AP_large": 0.6718945522382651,
+        "AR1": 0.3786819453628467,
+        "AR10": 0.6305565284781669,
+        "AR100": 0.686995383458975,
+        "AR_small": 0.5199372961764507,
+        "AR_medium": 0.7168937329319107,
+        "AR_large": 0.846849308951866
+      },
+      "originFinalMetrics": {
+        "AP": 0.4870874326026218,
+        "AP50": 0.6605324897592548,
+        "AP75": 0.5291228441262993,
+        "AP_small": 0.31011881526976776,
+        "AP_medium": 0.5334997526317166,
+        "AP_large": 0.6437141782793534,
+        "AR1": 0.3723696701346967,
+        "AR10": 0.618929637848709,
+        "AR100": 0.6807947787334218,
+        "AR_small": 0.5092095535192209,
+        "AR_medium": 0.727620134871822,
+        "AR_large": 0.8205084043674055
+      },
+      "originFinalPredictionCount": 567646,
+      "lineage": {
+        "trainingCheckpointSha256Recorded": "80e5cb230e4421e0fed5526af4822179e7e3e92785967529e40327fb5c083098",
+        "matchingExportedStateDictTensorsRecorded": 648,
+        "distributedPtSha256": "410733f02fec78e9bb4992cea2d67a203023492781036fd8b98bf139249b836d",
+        "sourceOnnxSha256Recorded": "961168d75fee48d779dfea66ebdecb49b9a6ad9f74bd38b2e91ac1ac9fb8b21f",
+        "distributedOnnxSha256": "34c59778d064ae888e67d9a075eebc9d4980c67f20afe89c1e07b67deee864f7",
+        "onnxGraphSha256": "69bf740a1bb40dbfd4ba5493e8cd09738ad1d80431e72b73d2e132b0cbdb0c26",
+        "originalCheckpointAndSourceOnnxIncluded": false
+      }
+    }
+  },
+  "verification": {
+    "developerSummaryReviewed": true,
+    "archiveManifestVerified": true,
+    "modelLineageVerified": true,
+    "historicalMetricsMatchedToRecords": true,
+    "independentSplitReproduction": true,
+    "historicalInferenceAdapterCompared": true,
+    "trainingRerun": false,
+    "localMetricsSource": "quality.json",
+    "archiveSha256": "cd13450c7242c2b2e72142f67e04b717f05a94fc5e258032893cf7c1b1230561",
+    "archiveManifestEntries": 162,
+    "matchingConfigCopies": 3,
+    "matchingLaunchSourceFiles": 17,
+    "historicalCheckpointTensorMatchIndependentlyRechecked": false,
+    "deploymentHashesMatchLineage": true,
+    "validationRunsReviewed": 60,
+    "trainingAndDeploymentModelSourcesByteIdentical": [
+      "model.py",
+      "yolo26_blocks.py"
+    ],
+    "upstreamModelParity": "Developer-recorded CPU FP32 parity on small shapes under matched initialization, including numerical and gradient checks. No mixed-precision or production-size parity claimed in the archived test.",
+    "sourceFiles": [
+      "evidence/launch_verification_640.json",
+      "evidence/CURRENT_REBUILD.json",
+      "evidence/split_verification.json",
+      "training/prepare_data.py",
+      "training/data/splits.json",
+      "training/train.py",
+      "training/detector/runtime.py",
+      "training/detector/data.py",
+      "training/detector/evaluation.py",
+      "training/detector/boxes.py",
+      "run/launch/launch.json",
+      "run/startup.json",
+      "run/config.json",
+      "run/history.json",
+      "run/final/summary.json",
+      "evidence/model_lineage.json",
+      "inference/person_camera/models/manifest.json",
+      "inference/distribution/manifest.json"
+    ],
+    "modelLineageScope": "Distributed artifact SHA-256, model source tensor structure and ONNX computation graph SHA-256; original training checkpoint and source ONNX binaries not present.",
+    "modelCheck": {
+      "trainable": 21896248,
+      "frozen": 0,
+      "shared": 18974272,
+      "modes": {
+        "nms": {
+          "parameterElements": 20435260,
+          "headElements": 1460988,
+          "expectedMissingTensors": 120,
+          "tensorKeys": 648,
+          "graphSha256": "3b5e042072f242f0b0cf648aae00004fdefdf997d6d81dc3c193ee19bed66b4b"
+        },
+        "nms_free": {
+          "parameterElements": 20435260,
+          "headElements": 1460988,
+          "expectedMissingTensors": 120,
+          "tensorKeys": 648,
+          "graphSha256": "69bf740a1bb40dbfd4ba5493e8cd09738ad1d80431e72b73d2e132b0cbdb0c26"
+        }
+      }
+    },
+    "localCocoArchiveSha256MatchesOrigin": {
+      "annotations_trainval2017.zip": {
+        "bytes": 252907541,
+        "sha256": "113a836d90195ee1f884e704da6304dfaaecff1f023f49b6ca93c4aaae470268"
+      },
+      "val2017.zip": {
+        "bytes": 815585330,
+        "sha256": "4f7e2ccb2866ec5041993c9cf2a952bbed69647b115d0f74da7ce8f4bef82f05"
+      },
+      "train2017.zip": {
+        "bytes": 19336861798,
+        "sha256": "69a8bb58ea5f8f99d24875f21416de2e9ded3178e903f1f7603e283b9e06d929"
+      }
+    }
+  },
+  "evaluationAdapters": {
+    "historical": {
+      "format": "PyTorch EMA checkpoint",
+      "device": "RTX 5090",
+      "autocast": "BF16",
+      "batchSize": 16,
+      "resize": "OpenCV INTER_LINEAR, ceil-fitted dimensions",
+      "nms": "Multi-label class-aware torchvision NMS with prelimit 30000",
+      "nmsFree": "Two-stage top-300",
+      "channelMemoryFormat": "channels_last",
+      "tf32EnabledForFloat32Kernels": true,
+      "decodeArithmetic": "float32"
+    },
+    "local": {
+      "format": "Distributed ONNX",
+      "device": "RTX 2080 (NMS) and RTX 3080 (NMS free)",
+      "autocast": "None, FP32, TF32 disabled",
+      "batchSize": 1,
+      "resize": "Pillow BILINEAR, round-fitted dimensions",
+      "nms": "Highest class only per anchor and class-aware OpenCV NMS",
+      "nmsFree": "Two-stage top-300",
+      "tf32EnabledForFloat32Kernels": false
+    },
+    "shared": {
+      "postprocessingScoreFloorExclusive": 0.001,
+      "nmsIou": 0.7,
+      "maxCandidatesPerImage": 300,
+      "maxDets": [
+        1,
+        10,
+        100
+      ],
+      "metricBackend": "pycocotools bbox"
+    },
+    "individualEffectsIsolated": false
+  }
+}

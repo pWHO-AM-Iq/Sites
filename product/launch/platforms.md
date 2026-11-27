@@ -1,0 +1,16 @@
+# 公開先と販売条件
+
+公式情報の確認日 2026-11-27。以下は出品可否の承認を意味しない。公開直前に規約・料金、最新管理画面の設定、国別の入金と返金処理を確認する。販売用データは [権利レビュー](rights-review.md) の保留解消後に確定。
+
+| 公開先 | 今回の用途と料金 | AI・リンクの扱いと未確定事項 |
+| --- | --- | --- |
+| BOOTH | 日本語の買い切りダウンロード候補。サービス利用料は商品価格×5.6%＋45円。端数、振込、BOOST の扱いはヘルプを確認。 | AI生成物への対応強化は特定作品・肖像等への高い依拠性、権利侵害を助長するツール等を対象に含む。検出モデルの個別分類と問い合わせ導線の可否は確認する。商品は BOOTH 内で提供する想定。別決済へ誘導する記載は承認確認まで使わない。 [利用規約](https://booth.pm/terms) · [ガイドライン](https://booth.pm/guidelines) · [AIに関する告知](https://booth.pm/announcements/828) · [手数料](https://booth.pixiv.help/hc/ja/articles/115004576874) |
+| Gumroad | 英語のスタンドアロン配布候補。直接販売 10%＋US$0.50、ヘルプでは別途カード処理 2.9%＋US$0.30 または PayPal 条件。Discover は処理込み30%。実取引の差引額をテストする。 | Help は AI サービス、外部で提供する AI サブスクリプション、再販売、Gumroad 内で提供する物がない商品を制限。権利が整理された永続ダウンロードとして分類できるか事前確認。受託学習の注文・決済には使用しない。Merchant of Record の案内は売上税等の徴収・送金を対象とし、提供者の自国の所得・会計は別途確認。 [規約](https://gumroad.com/terms) · [禁止事項](https://gumroad.com/prohibited) · [出品ヘルプ](https://gumroad.com/help/article/155-things-you-cant-sell-on-gumroad) · [料金](https://gumroad.com/pricing) · [手数料内訳](https://gumroad.com/help/article/66-gumroads-fees) |
+| Hugging Face | 技術モデルカード、許諾済みのファイルまたは文書への案内。配布の販売手数料は前提としない。ストレージ、追加機能、利用プランは別途確認。 | 権利保有、内容ポリシー、カードの license メタデータと適用範囲を確認。外部販売へ専ら誘導するカードにせず、実体として評価手順・制約・出典を掲載。gated リポジトリは閲覧許可の機能として検討し、購入や使用権の管理を別途決める。 [利用規約](https://huggingface.co/terms-of-service) · [コンテンツポリシー](https://huggingface.co/content-policy) · [モデルカード](https://huggingface.co/docs/hub/model-cards) · [ストレージ制限](https://huggingface.co/docs/hub/storage-limits) · [料金](https://huggingface.co/pricing) |
+| GitHub | 推論ドキュメント、許諾済みサンプルソース、再現用リリース。決済なし。プラン、LFS、Actions 等は別料金・上限を確認。 | README の関連宣伝・リンクは許容範囲あり。GitHub Pages を主に商取引や商用 SaaS 用として使うことは制限。大容量ファイルの配布方法を決める際は Releases と LFS の各条件を確認。 [AUP](https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies) · [追加製品規約](https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features) · [料金](https://github.com/pricing) |
+| Zenn | 技術記事。今回は無料投稿。将来の有料本では決済3.6%、控除後10%、出金350円。 | AI 補助を使う場合も著者が再現・確認し、量産や宣伝主体の投稿を避ける。関連リンクは技術本文に必要な参照、告知は末尾の控えめな範囲。 [ガイドライン](https://zenn.dev/guideline) · [AI 方針](https://info.zenn.dev/2026-03-10-ai-contents-guideline) · [規約と手数料](https://zenn.dev/terms) |
+| Qiita | 再現可能な技術記事。無料投稿、販売決済なし。 | 技術情報を中心に、根拠・再現条件を確認し、宣伝・スパムや転載主体を避ける。自動生成文は必ず検証し、一次出典と確認済み箇所を明示。商品への直接誘導は記事案から外した。 [利用規約](https://qiita.com/terms) · [コミュニティガイドライン](https://help.qiita.com/ja/articles/qiita-community-guideline) |
+| note | 開発背景記事。今回は無料。有料記事の場合、決済別事務手数料、控除後10%、振込270円。 | 利用規約の禁止事項と権利を守り、AI補助の記述は著者が検証。AI 学習への提供設定が必要なら投稿前に確認。製品リンクは行き先を明示し、提供条件を誤解させない。 [規約](https://terms.help-note.com/hc/ja/articles/44943817565465-note-%E3%81%94%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84) · [手数料](https://www.help-note.com/hc/ja/articles/360011358873) · [AI 学習対価還元](https://note.com/info/n/n49bbcbdefe1a) |
+| X | 準備状況と技術公開の告知。通常投稿で販売決済なし。 | 外部リンクは行き先を明示し、スパム、同文投稿、誤認を招く合成メディアを避ける。画像は説明用図として表示。予定段階の告知には購入リンクを付けず、公開後にリンクを追加する。 [真正性ポリシー](https://help.x.com/en/rules-and-policies/authenticity) · [リンクの安全性](https://help.x.com/en/safety-and-security/phishing-spam-and-malware-links) |
+
+先行順は技術資料の準備、権利が確定したモデルカードまたは GitHub の公開、BOOTH の日本語販売、分類確認後の Gumroad 英語販売。受託開発は専用窓口と個別契約で受付可否を判断する。

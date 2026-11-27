@@ -1,0 +1,29 @@
+﻿id,label,scope,status,ap50_95,ap50,params,latency_ms,latency_scope,latency_provenance,latency_backend,provenance,params_provenance,source_url
+nms,Custom Detector NMS,official_validation,measured,48.5227,65.9374,20435260,437.44549999246374,local_smoke,ort-cpu-nms,ort-cpu,"COCO 2017 val2017 / local ONNX, COCOeval",active inference / checkpoint metadata,
+nms_free,Custom Detector NMS-free,official_validation,measured,48.7577,66.1034,20435260,365.8249000145588,local_smoke,ort-cpu-nms_free,ort-cpu,"COCO 2017 val2017 / local ONNX, COCOeval",active inference / checkpoint metadata,
+yolo26m-local-control,YOLO26m E2E,local_control,measured,52.504,69.6997,,,,,,"COCO 2017 val2017 / local ONNX, COCOeval / RTX 3080",,https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26m.pt
+yolo26n,YOLO26n,official_reference,reported,40.9,,2400000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo26s,YOLO26s,official_reference,reported,48.6,,9500000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo26m,YOLO26m,official_reference,reported,53.1,,20400000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo26l,YOLO26l,official_reference,reported,55,,24800000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo26x,YOLO26x,official_reference,reported,57.5,,55700000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo11n,YOLO11n,official_reference,reported,39.5,,2600000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo11s,YOLO11s,official_reference,reported,47,,9400000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo11m,YOLO11m,official_reference,reported,51.5,,20100000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo11l,YOLO11l,official_reference,reported,53.4,,25300000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+yolo11x,YOLO11x,official_reference,reported,54.7,,56900000,,,,,ultralytics,vendor report / rounded,https://docs.ultralytics.com/compare/yolo26-vs-yolo11
+rt-detr-r18,RT-DETR-R18,official_reference,reported,46.5,,20000000,,,,,rtdetr,vendor report / rounded,https://github.com/lyuwenyu/RT-DETR
+rt-detr-r34,RT-DETR-R34,official_reference,reported,48.9,,31000000,,,,,rtdetr,vendor report / rounded,https://github.com/lyuwenyu/RT-DETR
+rt-detr-r50,RT-DETR-R50,official_reference,reported,53.1,,42000000,,,,,rtdetr,vendor report / rounded,https://github.com/lyuwenyu/RT-DETR
+rt-detr-r101,RT-DETR-R101,official_reference,reported,54.3,,76000000,,,,,rtdetr,vendor report / rounded,https://github.com/lyuwenyu/RT-DETR
+d-fine-n,D-FINE-N,official_reference,reported,42.8,,4000000,,,,,dfine,vendor report / rounded,https://github.com/Peterande/D-FINE
+d-fine-s,D-FINE-S,official_reference,reported,48.5,,10000000,,,,,dfine,vendor report / rounded,https://github.com/Peterande/D-FINE
+d-fine-m,D-FINE-M,official_reference,reported,52.3,,19000000,,,,,dfine,vendor report / rounded,https://github.com/Peterande/D-FINE
+d-fine-l,D-FINE-L,official_reference,reported,54,,31000000,,,,,dfine,vendor report / rounded,https://github.com/Peterande/D-FINE
+d-fine-x,D-FINE-X,official_reference,reported,55.8,,62000000,,,,,dfine,vendor report / rounded,https://github.com/Peterande/D-FINE
+rf-detr-n,RF-DETR-N,official_reference,reported,48.4,,30500000,,,,,rfdetr,vendor report / rounded,https://github.com/roboflow/rf-detr
+rf-detr-s,RF-DETR-S,official_reference,reported,53,,32100000,,,,,rfdetr,vendor report / rounded,https://github.com/roboflow/rf-detr
+rf-detr-m,RF-DETR-M,official_reference,reported,54.7,,33700000,,,,,rfdetr,vendor report / rounded,https://github.com/roboflow/rf-detr
+rf-detr-l,RF-DETR-L,official_reference,reported,56.5,,33900000,,,,,rfdetr,vendor report / rounded,https://github.com/roboflow/rf-detr
+rf-detr-xl,RF-DETR-XL,official_reference,reported,58.6,,126400000,,,,,rfdetr,vendor report / rounded,https://github.com/roboflow/rf-detr
+rf-detr-2xl,RF-DETR-2XL,official_reference,reported,60.1,,126900000,,,,,rfdetr,vendor report / rounded,https://github.com/roboflow/rf-detr

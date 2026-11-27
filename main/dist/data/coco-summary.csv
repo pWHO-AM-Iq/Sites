@@ -1,0 +1,4 @@
+model_id,scope,status,ap,ap50,ap75,apSmall,apMedium,apLarge,ar1,ar10,ar100,arSmall,arMedium,arLarge
+nms,official_validation,measured,48.5227,65.9374,52.4346,30.8001,53.6389,64.9935,36.242,59.2912,63.989,45.1338,69.4079,78.6577
+nms_free,official_validation,measured,48.7577,66.1034,52.9493,31.154,53.3543,64.6316,37.2414,61.9097,68.0756,50.8933,72.7725,82.3043
+yolo26m-local-control,local_control,measured,52.504,69.6997,57.2779,35.8667,56.9304,68.6388,38.9052,65.842,72.1187,56.7858,76.9872,86.5105

@@ -1,7 +1,8 @@
-"""Run the distributed ONNX models on the original COCO 2017 validation archives."""
+"""Run distributed detector models on the original COCO 2017 validation archives."""
 import argparse
 import io
 import json
+import sys
 import time
 from pathlib import Path
 from zipfile import ZipFile
@@ -70,9 +71,7 @@ def decode(boxes, scores, mode, geometry):
     return xyxy[valid], classes[valid], confidence[valid]
 
 
-def run(args):
-    if not 1 <= args.limit <= 5000:
-        raise ValueError("--limit must be between 1 and 5000")
+def make_onnx_runner(args):
     options = ort.SessionOptions()
     options.intra_op_num_threads = args.threads
     options.inter_op_num_threads = 1
@@ -83,6 +82,38 @@ def run(args):
     session = ort.InferenceSession(str(args.model), sess_options=options, providers=providers)
     if args.cuda is not None and session.get_providers()[0] != "CUDAExecutionProvider":
         raise RuntimeError("The CUDA provider was not initialized")
+
+    def infer(tensor):
+        return session.run(["boxes", "scores"], {"images": tensor})
+
+    return infer
+
+
+def make_torch_runner(args):
+    import torch
+
+    sys.path.insert(0, str(args.torch_source.resolve()))
+    from core import load_torch_model
+
+    torch.set_num_threads(args.threads)
+    if args.cuda is not None:
+        torch.backends.cuda.matmul.allow_tf32 = False
+        torch.backends.cudnn.allow_tf32 = False
+    device = "cpu" if args.cuda is None else f"cuda:{args.cuda}"
+    model = load_torch_model(args.model, args.mode, device=device).float()
+
+    @torch.inference_mode()
+    def infer(tensor):
+        outputs = model(torch.from_numpy(tensor).to(device=device), branch=args.mode)[args.mode]
+        return outputs["boxes"].float().cpu().numpy(), outputs["logits"].float().sigmoid().cpu().numpy()
+
+    return infer
+
+
+def run(args):
+    if not 1 <= args.limit <= 5000:
+        raise ValueError("--limit must be between 1 and 5000")
+    infer = make_onnx_runner(args) if args.torch_source is None else make_torch_runner(args)
     with ZipFile(args.dataset / "annotations_trainval2017.zip") as archive:
         gt = json.loads(archive.read("annotations/instances_val2017.json"))
     categories = sorted(cat["id"] for cat in gt["categories"])
@@ -94,7 +125,7 @@ def run(args):
             image_id = record["id"]
             tensor, geometry = prepare(archive.read("val2017/" + record["file_name"]))
             assert geometry[0] == (record["width"], record["height"])
-            boxes, scores = session.run(["boxes", "scores"], {"images": tensor})
+            boxes, scores = infer(tensor)
             if boxes.shape != (1, 8400, 4) or scores.shape != (1, 8400, 80):
                 raise RuntimeError(f"Unexpected output shape in image {image_id}: {boxes.shape}, {scores.shape}")
             if not (np.isfinite(boxes).all() and np.isfinite(scores).all()):
@@ -120,4 +151,5 @@ if __name__ == "__main__":
     parser.add_argument("--threads", type=int, default=4)
     parser.add_argument("--limit", type=int, default=5000)
     parser.add_argument("--cuda", type=int)
+    parser.add_argument("--torch-source", type=Path, help="Use verified project-side Torch loader from this directory")
     run(parser.parse_args())

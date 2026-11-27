@@ -1,0 +1,2090 @@
+{
+  "schema_version": 1,
+  "runs": {
+    "ort-cpu-nms": {
+      "mode": "nms",
+      "backend": "ort-cpu",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:15:15.893843+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms.onnx",
+      "sha256": "33dc5f8085888ea27a32fed4731d34ace5a819cf35d525b7adec13bf40cda120",
+      "session_init_ms": 474.95529998559505,
+      "rss_bytes_before_load": 44240896,
+      "rss_bytes_peak_at_step_boundaries": 528670720,
+      "rss_bytes_at_end": 480743424,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "1.22.0",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "transfer_in_forward": true
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 3.6982510011876,
+            "p50": 3.3269000123254955,
+            "p95": 5.3467000368982545
+          },
+          "preprocess": {
+            "mean": 6.057178997434676,
+            "p50": 5.3078999917488545,
+            "p95": 11.135360028129071
+          },
+          "forward_with_transfers": {
+            "mean": 445.32968100334983,
+            "p50": 426.9215000094846,
+            "p95": 594.3781250010943
+          },
+          "postprocess": {
+            "mean": 2.344839997240342,
+            "p50": 2.105049992678687,
+            "p95": 4.580385010922328
+          },
+          "e2e": {
+            "mean": 457.42995099921245,
+            "p50": 437.44549999246374,
+            "p95": 611.7471750389086
+          }
+        },
+        "fps": 2.1861270732613693,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 14,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 438.94989998079836
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 457.8544999822043
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 374.2578999954276
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 396.4451999636367
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 361.4062000415288
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 12,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 368.87869995553046
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 10,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 361.9223000132479
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 367.9724999819882
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 24,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 384.57560003735125
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 2.1949533314909786,
+                "p50": 1.8206499808002263,
+                "p95": 3.4904300002381197
+              },
+              "preprocess": {
+                "mean": 5.21750667054827,
+                "p50": 4.7048999986145645,
+                "p95": 7.474204988102428
+              },
+              "forward_with_transfers": {
+                "mean": 450.02388000139035,
+                "p50": 420.32170001766644,
+                "p95": 642.6294149947352
+              },
+              "postprocess": {
+                "mean": 2.785629996409019,
+                "p50": 2.5645499990787357,
+                "p95": 4.2654399789171284
+              },
+              "e2e": {
+                "mean": 460.2219699998386,
+                "p50": 433.14539999119006,
+                "p95": 653.7519999808862
+              }
+            },
+            "fps": 2.1728645418652017
+          }
+        }
+      },
+      "device_memory": {}
+    },
+    "ort-cpu-nms_free": {
+      "mode": "nms_free",
+      "backend": "ort-cpu",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:14:15.064228+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms_free.onnx",
+      "sha256": "34c59778d064ae888e67d9a075eebc9d4980c67f20afe89c1e07b67deee864f7",
+      "session_init_ms": 315.8564000041224,
+      "rss_bytes_before_load": 44191744,
+      "rss_bytes_peak_at_step_boundaries": 528928768,
+      "rss_bytes_at_end": 480641024,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "1.22.0",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "transfer_in_forward": true
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 3.0893990013282746,
+            "p50": 2.9991499905008823,
+            "p95": 4.2587250034557655
+          },
+          "preprocess": {
+            "mean": 4.563404999789782,
+            "p50": 3.975499974330887,
+            "p95": 7.937104991287923
+          },
+          "forward_with_transfers": {
+            "mean": 362.4608799989801,
+            "p50": 355.7332999771461,
+            "p95": 453.6811850441154
+          },
+          "postprocess": {
+            "mean": 2.5802639999892563,
+            "p50": 2.350199967622757,
+            "p95": 3.927899966947734
+          },
+          "e2e": {
+            "mean": 372.6939480000874,
+            "p50": 365.8249000145588,
+            "p95": 465.58964497526176
+          }
+        },
+        "fps": 2.683166725314696,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 518.2829999830574
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 622.5732999737374
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 426.52300000190735
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 492.67770000733435
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 475.032500049565
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 11,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 486.6247999598272
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 8,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 546.8250999692827
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 663.589800009504
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 25,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 526.0435999953188
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 2.229190004679064,
+                "p50": 1.8240499775856733,
+                "p95": 3.5913449944928275
+              },
+              "preprocess": {
+                "mean": 5.3139799953593565,
+                "p50": 5.207999987760559,
+                "p95": 7.035950009594671
+              },
+              "forward_with_transfers": {
+                "mean": 435.71528000563075,
+                "p50": 425.76694997842424,
+                "p95": 517.1343350317328
+              },
+              "postprocess": {
+                "mean": 3.642049990594387,
+                "p50": 3.7158999766688794,
+                "p95": 5.098914963309653
+              },
+              "e2e": {
+                "mean": 446.90049999626353,
+                "p50": 437.0827999955509,
+                "p95": 528.5776599717791
+              }
+            },
+            "fps": 2.2376345517813494
+          }
+        }
+      },
+      "device_memory": {}
+    },
+    "ort-cuda-nms": {
+      "mode": "nms",
+      "backend": "ort-cuda",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:13:51.296882+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms.onnx",
+      "sha256": "33dc5f8085888ea27a32fed4731d34ace5a819cf35d525b7adec13bf40cda120",
+      "session_init_ms": 2103.242300043348,
+      "rss_bytes_before_load": 44294144,
+      "rss_bytes_peak_at_step_boundaries": 1230065664,
+      "rss_bytes_at_end": 1191366656,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "1.22.0",
+        "providers": [
+          "CUDAExecutionProvider",
+          "CPUExecutionProvider"
+        ],
+        "transfer_in_forward": true,
+        "allow_tf32": true
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 4.22285899927374,
+            "p50": 3.9541000151075423,
+            "p95": 6.556834955699741
+          },
+          "preprocess": {
+            "mean": 7.8255089989397675,
+            "p50": 7.0521499728783965,
+            "p95": 13.817420005216261
+          },
+          "forward_with_transfers": {
+            "mean": 18.527205997379497,
+            "p50": 18.09384999796748,
+            "p95": 27.57352498592809
+          },
+          "postprocess": {
+            "mean": 2.8068170027108863,
+            "p50": 2.323749999050051,
+            "p95": 6.034204972092994
+          },
+          "e2e": {
+            "mean": 33.38239099830389,
+            "p50": 33.15719999955036,
+            "p95": 49.435389979043975
+          }
+        },
+        "fps": 29.9559129857058,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 14,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 18.509400018956512
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 23.26129999710247
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 23.179400013759732
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 19.59260000148788
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 16.407800023443997
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 12,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 20.527899963781238
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 10,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 21.21659996919334
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 16.396299994084984
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 24,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 51.32440000306815
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 1.5062233277906973,
+                "p50": 1.089799974579364,
+                "p95": 2.4389899772359054
+              },
+              "preprocess": {
+                "mean": 3.358893333158145,
+                "p50": 3.3124999899882823,
+                "p95": 4.5259350241394705
+              },
+              "forward_with_transfers": {
+                "mean": 10.484936670400202,
+                "p50": 10.244600009173155,
+                "p95": 11.839820028399117
+              },
+              "postprocess": {
+                "mean": 1.4115033341416467,
+                "p50": 1.3089999847579747,
+                "p95": 2.076265012146905
+              },
+              "e2e": {
+                "mean": 16.76155666549069,
+                "p50": 16.1993500078097,
+                "p95": 20.894414983922612
+              }
+            },
+            "fps": 59.66032988205903
+          }
+        }
+      },
+      "device_memory": {}
+    },
+    "ort-cuda-nms_free": {
+      "mode": "nms_free",
+      "backend": "ort-cuda",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:13:30.908504+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms_free.onnx",
+      "sha256": "34c59778d064ae888e67d9a075eebc9d4980c67f20afe89c1e07b67deee864f7",
+      "session_init_ms": 4037.337099958677,
+      "rss_bytes_before_load": 44314624,
+      "rss_bytes_peak_at_step_boundaries": 1224605696,
+      "rss_bytes_at_end": 1184944128,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "1.22.0",
+        "providers": [
+          "CUDAExecutionProvider",
+          "CPUExecutionProvider"
+        ],
+        "transfer_in_forward": true,
+        "allow_tf32": true
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 4.5325830014189705,
+            "p50": 4.208700003800914,
+            "p95": 7.019725014106369
+          },
+          "preprocess": {
+            "mean": 8.330969004309736,
+            "p50": 7.708600023761392,
+            "p95": 14.374535001115872
+          },
+          "forward_with_transfers": {
+            "mean": 21.0316749982303,
+            "p50": 21.802899980684742,
+            "p95": 28.443259972846135
+          },
+          "postprocess": {
+            "mean": 4.033622999559157,
+            "p50": 4.055299999890849,
+            "p95": 6.612449989188462
+          },
+          "e2e": {
+            "mean": 37.928850003518164,
+            "p50": 38.45530000398867,
+            "p95": 51.5905150125036
+          }
+        },
+        "fps": 26.36515475442158,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 34.91990000475198
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 48.869899997953326
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 33.65919995121658
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 28.77740003168583
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 24.850299989338964
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 11,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 50.357499974779785
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 8,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 40.722500008996576
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 29.071199998725206
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 25,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 61.97739997878671
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 3.805579999849821,
+                "p50": 3.6958999990019947,
+                "p95": 5.310004993225448
+              },
+              "preprocess": {
+                "mean": 9.312686663664257,
+                "p50": 7.963499985635281,
+                "p95": 14.086035010404883
+              },
+              "forward_with_transfers": {
+                "mean": 24.258403330653284,
+                "p50": 23.243750038091093,
+                "p95": 32.1332649764372
+              },
+              "postprocess": {
+                "mean": 4.757926667419572,
+                "p50": 4.6471999667119235,
+                "p95": 6.95416999515146
+              },
+              "e2e": {
+                "mean": 42.13459666158693,
+                "p50": 40.65324997645803,
+                "p95": 50.32873503805604
+              }
+            },
+            "fps": 23.73346558961309
+          }
+        }
+      },
+      "device_memory": {}
+    },
+    "ort-trt-nms": {
+      "mode": "nms",
+      "backend": "ort-trt",
+      "status": "not_measured"
+    },
+    "ort-trt-nms_free": {
+      "mode": "nms_free",
+      "backend": "ort-trt",
+      "status": "not_measured"
+    },
+    "torch-cpu-nms": {
+      "mode": "nms",
+      "backend": "torch-cpu",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:29:27.143869+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms.pt",
+      "sha256": "9a6045ec73c577c5aa868e41a2b8baa8ed9f6f0bda2c32abd3cfd106f8e55a4c",
+      "session_init_ms": 1956.754099985119,
+      "rss_bytes_before_load": 44429312,
+      "rss_bytes_peak_at_step_boundaries": 903270400,
+      "rss_bytes_at_end": 792920064,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "2.8.0+cu126",
+        "transfer_in_forward": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "cuda_version": "12.6",
+        "precision": "torch.float32",
+        "tf32_allowed": null
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 2.644870998337865,
+            "p50": 2.569799980847165,
+            "p95": 3.824210012680851
+          },
+          "preprocess": {
+            "mean": 3.5325459990417585,
+            "p50": 3.0576999997720122,
+            "p95": 5.549969978164881
+          },
+          "forward_with_transfers": {
+            "mean": 363.45712000271305,
+            "p50": 349.83044999535196,
+            "p95": 430.6098100059897
+          },
+          "postprocess": {
+            "mean": 2.1958689991151914,
+            "p50": 2.040149993263185,
+            "p95": 3.4645949810510497
+          },
+          "e2e": {
+            "mean": 371.83040599920787,
+            "p50": 358.57060001580976,
+            "p95": 439.8309849930227
+          }
+        },
+        "fps": 2.689398133842046,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 14,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 378.8660000427626
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 375.91359997168183
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 420.31140002654865
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 392.1248000115156
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 366.3472000043839
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 12,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 358.153700013645
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 10,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 330.23730001877993
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 374.9002999975346
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 24,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 341.42090001842007
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 1.357490000858282,
+                "p50": 1.003599987598136,
+                "p95": 2.2679649962810795
+              },
+              "preprocess": {
+                "mean": 3.639263335693007,
+                "p50": 3.0624500068370253,
+                "p95": 7.235930024762624
+              },
+              "forward_with_transfers": {
+                "mean": 369.02682333214517,
+                "p50": 354.0725000202656,
+                "p95": 473.40169999515626
+              },
+              "postprocess": {
+                "mean": 2.518943336326629,
+                "p50": 2.5387499772477895,
+                "p95": 3.465744981076568
+              },
+              "e2e": {
+                "mean": 376.5425200050231,
+                "p50": 360.7950499863364,
+                "p95": 481.1797800211933
+              }
+            },
+            "fps": 2.6557425705512885
+          }
+        }
+      },
+      "device_memory": {},
+      "raw_onnx_cpu_parity": {
+        "images": 16,
+        "reference_sha256": "33dc5f8085888ea27a32fed4731d34ace5a819cf35d525b7adec13bf40cda120",
+        "box_coordinate_abs_delta_model_pixels": {
+          "mean": 3.2813724828884006e-05,
+          "p99": 0.00030517578125,
+          "max": 0.004119873046875
+        },
+        "class_probability_abs_delta": {
+          "mean": 9.179403903658567e-09,
+          "p99": 6.989972966664475e-08,
+          "max": 2.092123031616211e-05
+        }
+      }
+    },
+    "torch-cpu-nms_free": {
+      "mode": "nms_free",
+      "backend": "torch-cpu",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:30:38.529458+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms_free.pt",
+      "sha256": "410733f02fec78e9bb4992cea2d67a203023492781036fd8b98bf139249b836d",
+      "session_init_ms": 1910.5381999979727,
+      "rss_bytes_before_load": 44429312,
+      "rss_bytes_peak_at_step_boundaries": 900743168,
+      "rss_bytes_at_end": 789929984,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "2.8.0+cu126",
+        "transfer_in_forward": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "cuda_version": "12.6",
+        "precision": "torch.float32",
+        "tf32_allowed": null
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 3.211367000476457,
+            "p50": 3.0986999918241054,
+            "p95": 5.115290018147789
+          },
+          "preprocess": {
+            "mean": 4.974367001559585,
+            "p50": 4.519000009167939,
+            "p95": 8.38403501547873
+          },
+          "forward_with_transfers": {
+            "mean": 485.97357900289353,
+            "p50": 422.45380001259036,
+            "p95": 873.813505040016
+          },
+          "postprocess": {
+            "mean": 3.2085259986342862,
+            "p50": 2.879050007322803,
+            "p95": 5.858929999521932
+          },
+          "e2e": {
+            "mean": 497.36783900356386,
+            "p50": 432.64064998948015,
+            "p95": 889.7807550383732
+          }
+        },
+        "fps": 2.01058436348321,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 448.6728999763727
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 430.93180004507303
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 587.5278999446891
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 799.1302000009455
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 766.1277999868616
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 11,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 493.802799959667
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 8,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 438.4100000024773
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 455.49650001339614
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 25,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 517.2141999937594
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 2.156466666686659,
+                "p50": 1.3142499956302345,
+                "p95": 6.080625011236403
+              },
+              "preprocess": {
+                "mean": 5.137236662752305,
+                "p50": 4.574099992169067,
+                "p95": 7.792329994845201
+              },
+              "forward_with_transfers": {
+                "mean": 473.6601366661489,
+                "p50": 422.6511499728076,
+                "p95": 677.3541649978142
+              },
+              "postprocess": {
+                "mean": 3.28148667079707,
+                "p50": 2.8471499972511083,
+                "p95": 6.582354987040147
+              },
+              "e2e": {
+                "mean": 484.23532666638494,
+                "p50": 431.7069999524392,
+                "p95": 690.0800499977777
+              }
+            },
+            "fps": 2.0651116201791537
+          }
+        }
+      },
+      "device_memory": {},
+      "raw_onnx_cpu_parity": {
+        "images": 16,
+        "reference_sha256": "34c59778d064ae888e67d9a075eebc9d4980c67f20afe89c1e07b67deee864f7",
+        "box_coordinate_abs_delta_model_pixels": {
+          "mean": 3.097351873293519e-05,
+          "p99": 0.00030517578125,
+          "max": 0.0032958984375
+        },
+        "class_probability_abs_delta": {
+          "mean": 3.878234622334276e-09,
+          "p99": 5.5161979979345685e-08,
+          "max": 6.67572021484375e-06
+        }
+      }
+    },
+    "torch-fp32-nms": {
+      "mode": "nms",
+      "backend": "torch-fp32",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:28:22.406768+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms.pt",
+      "sha256": "9a6045ec73c577c5aa868e41a2b8baa8ed9f6f0bda2c32abd3cfd106f8e55a4c",
+      "session_init_ms": 2292.2879999969155,
+      "rss_bytes_before_load": 44478464,
+      "rss_bytes_peak_at_step_boundaries": 1268359168,
+      "rss_bytes_at_end": 1228763136,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "2.8.0+cu126",
+        "transfer_in_forward": true,
+        "device": "cuda:0",
+        "gpu_name": "NVIDIA GeForce RTX 3080",
+        "cuda_version": "12.6",
+        "precision": "torch.float32",
+        "tf32_allowed": false
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 2.3532009992050007,
+            "p50": 2.3677000135648996,
+            "p95": 3.2961650023935363
+          },
+          "preprocess": {
+            "mean": 2.9831220029154792,
+            "p50": 2.5833500258158892,
+            "p95": 4.222485038917512
+          },
+          "forward_with_transfers": {
+            "mean": 19.81831599958241,
+            "p50": 19.33415001258254,
+            "p95": 21.623204977368
+          },
+          "postprocess": {
+            "mean": 1.8000279978150502,
+            "p50": 1.73200000426732,
+            "p95": 2.1891900163609535
+          },
+          "e2e": {
+            "mean": 26.95466699951794,
+            "p50": 26.25250001437962,
+            "p95": 29.93172495625913
+          }
+        },
+        "fps": 37.09932680740905,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 14,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 26.57529996940866
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 34.69040000345558
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 28.874200012069196
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 28.12390000326559
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 30.585699947550893
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 12,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 32.928100030403584
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 10,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 30.225900001823902
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 36.03219997603446
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 24,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 52.69049998605624
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 1.1463966666876029,
+                "p50": 0.9034000104293227,
+                "p95": 1.2551849911687891
+              },
+              "preprocess": {
+                "mean": 2.978076665507009,
+                "p50": 2.870050026103854,
+                "p95": 3.8117850024718782
+              },
+              "forward_with_transfers": {
+                "mean": 20.444180003444973,
+                "p50": 19.64610000140965,
+                "p95": 24.681204988155507
+              },
+              "postprocess": {
+                "mean": 2.090853330446407,
+                "p50": 2.0156500104349107,
+                "p95": 2.4597700103186066
+              },
+              "e2e": {
+                "mean": 26.659506666085992,
+                "p50": 25.443849997827783,
+                "p95": 32.03196499671321
+              }
+            },
+            "fps": 37.51007145500246
+          }
+        }
+      },
+      "device_memory": {
+        "cuda_peak_allocated_bytes": 289440256,
+        "cuda_peak_reserved_bytes": 316669952
+      },
+      "raw_onnx_cpu_parity": {
+        "images": 16,
+        "reference_sha256": "33dc5f8085888ea27a32fed4731d34ace5a819cf35d525b7adec13bf40cda120",
+        "box_coordinate_abs_delta_model_pixels": {
+          "mean": 3.322559496155009e-05,
+          "p99": 0.00032806396484375,
+          "max": 0.00616455078125
+        },
+        "class_probability_abs_delta": {
+          "mean": 9.187430372037397e-09,
+          "p99": 6.990418235375272e-08,
+          "max": 3.185868263244629e-05
+        }
+      }
+    },
+    "torch-fp32-nms_free": {
+      "mode": "nms_free",
+      "backend": "torch-fp32",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:28:39.029651+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms_free.pt",
+      "sha256": "410733f02fec78e9bb4992cea2d67a203023492781036fd8b98bf139249b836d",
+      "session_init_ms": 2159.2168000061065,
+      "rss_bytes_before_load": 44584960,
+      "rss_bytes_peak_at_step_boundaries": 1268219904,
+      "rss_bytes_at_end": 1228652544,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "2.8.0+cu126",
+        "transfer_in_forward": true,
+        "device": "cuda:0",
+        "gpu_name": "NVIDIA GeForce RTX 3080",
+        "cuda_version": "12.6",
+        "precision": "torch.float32",
+        "tf32_allowed": false
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 2.3861779941944405,
+            "p50": 2.42979999165982,
+            "p95": 3.309644988621585
+          },
+          "preprocess": {
+            "mean": 2.9288890009047464,
+            "p50": 2.678299992112443,
+            "p95": 4.48070500860922
+          },
+          "forward_with_transfers": {
+            "mean": 19.810372000792995,
+            "p50": 19.35729998513125,
+            "p95": 21.369920019060373
+          },
+          "postprocess": {
+            "mean": 2.253317998838611,
+            "p50": 2.198199974372983,
+            "p95": 2.537219988880679
+          },
+          "e2e": {
+            "mean": 27.378756994730793,
+            "p50": 26.963200012687594,
+            "p95": 29.13276501349173
+          }
+        },
+        "fps": 36.5246676535555,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 26.199600019026548
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 31.259300012607127
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 36.991900007706136
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 28.416900022421032
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 24.862200021743774
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 11,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 29.52099998947233
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 8,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 29.276899993419647
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 25.629499985370785
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 25,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 55.445500009227544
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 1.2975733377970755,
+                "p50": 1.0410999821033329,
+                "p95": 1.36398997856304
+              },
+              "preprocess": {
+                "mean": 3.570659994147718,
+                "p50": 3.4555500315036625,
+                "p95": 4.2949350172420955
+              },
+              "forward_with_transfers": {
+                "mean": 22.427700005937368,
+                "p50": 22.304500016616657,
+                "p95": 25.464779997128062
+              },
+              "postprocess": {
+                "mean": 2.5866799987852573,
+                "p50": 2.508650009986013,
+                "p95": 3.0535500030964613
+              },
+              "e2e": {
+                "mean": 29.88261333666742,
+                "p50": 29.77429999737069,
+                "p95": 36.43589002895168
+              }
+            },
+            "fps": 33.46427532069129
+          }
+        }
+      },
+      "device_memory": {
+        "cuda_peak_allocated_bytes": 289440256,
+        "cuda_peak_reserved_bytes": 316669952
+      },
+      "raw_onnx_cpu_parity": {
+        "images": 16,
+        "reference_sha256": "34c59778d064ae888e67d9a075eebc9d4980c67f20afe89c1e07b67deee864f7",
+        "box_coordinate_abs_delta_model_pixels": {
+          "mean": 3.109186582150869e-05,
+          "p99": 0.00030517578125,
+          "max": 0.003753662109375
+        },
+        "class_probability_abs_delta": {
+          "mean": 3.880109122889053e-09,
+          "p99": 5.5165403587409346e-08,
+          "max": 1.36643648147583e-05
+        }
+      }
+    },
+    "torch-fp16-nms": {
+      "mode": "nms",
+      "backend": "torch-fp16",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:28:55.101637+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms.pt",
+      "sha256": "9a6045ec73c577c5aa868e41a2b8baa8ed9f6f0bda2c32abd3cfd106f8e55a4c",
+      "session_init_ms": 2130.8910000370815,
+      "rss_bytes_before_load": 44527616,
+      "rss_bytes_peak_at_step_boundaries": 1401061376,
+      "rss_bytes_at_end": 1361453056,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "2.8.0+cu126",
+        "transfer_in_forward": true,
+        "device": "cuda:0",
+        "gpu_name": "NVIDIA GeForce RTX 3080",
+        "cuda_version": "12.6",
+        "precision": "torch.float16",
+        "tf32_allowed": false
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 2.6165260036941618,
+            "p50": 2.616199984913692,
+            "p95": 3.7343449745094404
+          },
+          "preprocess": {
+            "mean": 3.279217997333035,
+            "p50": 3.0060499848332256,
+            "p95": 5.113399995025247
+          },
+          "forward_with_transfers": {
+            "mean": 21.700756002101116,
+            "p50": 20.749099989188835,
+            "p95": 27.96665996138472
+          },
+          "postprocess": {
+            "mean": 2.1138050011359155,
+            "p50": 1.969200005987659,
+            "p95": 2.848649999941698
+          },
+          "e2e": {
+            "mean": 29.710305004264228,
+            "p50": 28.68680001120083,
+            "p95": 36.414610003703274
+          }
+        },
+        "fps": 33.65835523588442,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 14,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 28.083000041078776
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 33.55400002328679
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 34.75789999356493
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 34.39290000824258
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 29.04960000887513
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 12,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 30.239199986681342
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 10,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 33.34910003468394
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 29.35660001821816
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 24,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 81.84900000924245
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 1.3686300022527575,
+                "p50": 1.1163500021211803,
+                "p95": 1.7302750173257657
+              },
+              "preprocess": {
+                "mean": 3.6803099947671094,
+                "p50": 3.501150000374764,
+                "p95": 4.825045002507975
+              },
+              "forward_with_transfers": {
+                "mean": 23.370189997755613,
+                "p50": 22.832399990875274,
+                "p95": 26.995760013232935
+              },
+              "postprocess": {
+                "mean": 2.755023339220012,
+                "p50": 2.766350022284314,
+                "p95": 3.2042449864093214
+              },
+              "e2e": {
+                "mean": 31.17415333399549,
+                "p50": 30.22384998621419,
+                "p95": 37.54753999528475
+              }
+            },
+            "fps": 32.07785594964331
+          }
+        }
+      },
+      "device_memory": {
+        "cuda_peak_allocated_bytes": 148787712,
+        "cuda_peak_reserved_bytes": 171966464
+      },
+      "raw_onnx_cpu_parity": {
+        "images": 16,
+        "reference_sha256": "33dc5f8085888ea27a32fed4731d34ace5a819cf35d525b7adec13bf40cda120",
+        "box_coordinate_abs_delta_model_pixels": {
+          "mean": 0.049227986484766006,
+          "p99": 0.46225006103515653,
+          "max": 6.632904052734375
+        },
+        "class_probability_abs_delta": {
+          "mean": 1.4579688922822243e-07,
+          "p99": 8.98527332537924e-08,
+          "max": 0.038520634174346924
+        }
+      }
+    },
+    "torch-fp16-nms_free": {
+      "mode": "nms_free",
+      "backend": "torch-fp16",
+      "status": "completed",
+      "generated_utc": "2026-11-27T10:29:11.369822+00:00",
+      "batch": 1,
+      "size": [
+        640,
+        640
+      ],
+      "threads": 4,
+      "warmup": 10,
+      "model_file": "custom_detector_nms_free.pt",
+      "sha256": "410733f02fec78e9bb4992cea2d67a203023492781036fd8b98bf139249b836d",
+      "session_init_ms": 2278.045999992173,
+      "rss_bytes_before_load": 44486656,
+      "rss_bytes_peak_at_step_boundaries": 1399984128,
+      "rss_bytes_at_end": 1360408576,
+      "hardware": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+        "logical_cpus": 16,
+        "python": "3.12.0"
+      },
+      "backend_details": {
+        "version": "2.8.0+cu126",
+        "transfer_in_forward": true,
+        "device": "cuda:0",
+        "gpu_name": "NVIDIA GeForce RTX 3080",
+        "cuda_version": "12.6",
+        "precision": "torch.float16",
+        "tf32_allowed": false
+      },
+      "steady_state": {
+        "iterations": 100,
+        "ms": {
+          "decode": {
+            "mean": 2.603232999681495,
+            "p50": 2.6042000099550933,
+            "p95": 3.422194963786751
+          },
+          "preprocess": {
+            "mean": 3.188007000135258,
+            "p50": 2.878650004277006,
+            "p95": 5.415109955356456
+          },
+          "forward_with_transfers": {
+            "mean": 20.676740999915637,
+            "p50": 20.388599979924038,
+            "p95": 22.88230998965446
+          },
+          "postprocess": {
+            "mean": 2.267938997829333,
+            "p50": 2.248200005851686,
+            "p95": 2.698400046210736
+          },
+          "e2e": {
+            "mean": 28.735919997561723,
+            "p50": 28.36509997723624,
+            "p95": 32.10892996576148
+          }
+        },
+        "fps": 34.7996514496439,
+        "repeat_output_mismatches": 0,
+        "unique_inputs": 16
+      },
+      "compatibility": {
+        "jpeg": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 27.86470000864938
+        },
+        "png": {
+          "status": "completed",
+          "detections": 13,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 40.69260001415387
+        },
+        "wide": {
+          "status": "completed",
+          "detections": 3,
+          "size": [
+            1280,
+            180
+          ],
+          "e2e_ms": 32.128100050613284
+        },
+        "tall": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            180,
+            1280
+          ],
+          "e2e_ms": 30.747200013138354
+        },
+        "blank": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 26.6954000107944
+        },
+        "low_light": {
+          "status": "completed",
+          "detections": 11,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 31.636999978218228
+        },
+        "noise": {
+          "status": "completed",
+          "detections": 8,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 34.04620004585013
+        },
+        "small_content": {
+          "status": "completed",
+          "detections": 0,
+          "size": [
+            640,
+            480
+          ],
+          "e2e_ms": 26.032200024928898
+        },
+        "tiled_content": {
+          "status": "completed",
+          "detections": 24,
+          "size": [
+            1280,
+            960
+          ],
+          "e2e_ms": 52.48130002291873
+        },
+        "empty_bytes": {
+          "status": "rejected_at_decode"
+        },
+        "video": {
+          "status": "completed",
+          "expected_frames": 30,
+          "processed_frames": 30,
+          "performance": {
+            "iterations": 30,
+            "ms": {
+              "decode": {
+                "mean": 1.2651999985488753,
+                "p50": 0.9344999853055924,
+                "p95": 2.3084799962816738
+              },
+              "preprocess": {
+                "mean": 3.143903329813232,
+                "p50": 2.867600036552176,
+                "p95": 4.283459982252678
+              },
+              "forward_with_transfers": {
+                "mean": 20.883343337724607,
+                "p50": 20.065650023752823,
+                "p95": 24.41389499581419
+              },
+              "postprocess": {
+                "mean": 2.388710002802933,
+                "p50": 2.329499984625727,
+                "p95": 2.627750029205344
+              },
+              "e2e": {
+                "mean": 27.681156668889646,
+                "p50": 26.41635001054965,
+                "p95": 34.90007000509648
+              }
+            },
+            "fps": 36.1256580410125
+          }
+        }
+      },
+      "device_memory": {
+        "cuda_peak_allocated_bytes": 148787712,
+        "cuda_peak_reserved_bytes": 171966464
+      },
+      "raw_onnx_cpu_parity": {
+        "images": 16,
+        "reference_sha256": "34c59778d064ae888e67d9a075eebc9d4980c67f20afe89c1e07b67deee864f7",
+        "box_coordinate_abs_delta_model_pixels": {
+          "mean": 0.047293663024902344,
+          "p99": 0.4486847686767579,
+          "max": 7.20220947265625
+        },
+        "class_probability_abs_delta": {
+          "mean": 3.862271569232689e-08,
+          "p99": 6.096706783864647e-08,
+          "max": 0.04579314589500427
+        }
+      }
+    }
+  },
+  "cpu_cuda_parity": {
+    "nms": {
+      "images": 16,
+      "matched_by_class_and_iou_0_5": 90,
+      "max_matched_coordinate_delta_px": 0.2069091796875,
+      "max_matched_score_delta": 0.0012603700160980225,
+      "unmatched_cpu": 0,
+      "unmatched_cuda": 0
+    },
+    "nms_free": {
+      "images": 16,
+      "matched_by_class_and_iou_0_5": 82,
+      "max_matched_coordinate_delta_px": 0.061614990234375,
+      "max_matched_score_delta": 0.001949012279510498,
+      "unmatched_cpu": 0,
+      "unmatched_cuda": 0
+    }
+  },
+  "pytorch_vs_onnx_cpu_parity": {
+    "torch-cpu-nms": {
+      "images": 16,
+      "matched_by_class_and_iou_0_5": 90,
+      "unmatched_reference": 0,
+      "unmatched_candidate": 0,
+      "max_matched_coordinate_delta_px": 0.0001220703125,
+      "max_matched_score_delta": 2.4437904357910156e-06
+    },
+    "torch-fp32-nms": {
+      "images": 16,
+      "matched_by_class_and_iou_0_5": 90,
+      "unmatched_reference": 0,
+      "unmatched_candidate": 0,
+      "max_matched_coordinate_delta_px": 0.000152587890625,
+      "max_matched_score_delta": 3.0994415283203125e-06
+    },
+    "torch-fp16-nms": {
+      "images": 16,
+      "matched_by_class_and_iou_0_5": 90,
+      "unmatched_reference": 0,
+      "unmatched_candidate": 0,
+      "max_matched_coordinate_delta_px": 2.77734375,
+      "max_matched_score_delta": 0.003566533327102661
+    },
+    "torch-cpu-nms_free": {
+      "images": 16,
+      "matched_by_class_and_iou_0_5": 82,
+      "unmatched_reference": 0,
+      "unmatched_candidate": 0,
+      "max_matched_coordinate_delta_px": 0.000152587890625,
+      "max_matched_score_delta": 6.67572021484375e-06
+    },
+    "torch-fp32-nms_free": {
+      "images": 16,
+      "matched_by_class_and_iou_0_5": 82,
+      "unmatched_reference": 0,
+      "unmatched_candidate": 0,
+      "max_matched_coordinate_delta_px": 0.0001220703125,
+      "max_matched_score_delta": 5.543231964111328e-06
+    },
+    "torch-fp16-nms_free": {
+      "images": 16,
+      "matched_by_class_and_iou_0_5": 82,
+      "unmatched_reference": 0,
+      "unmatched_candidate": 0,
+      "max_matched_coordinate_delta_px": 0.27362060546875,
+      "max_matched_score_delta": 0.04579314589500427
+    }
+  },
+  "hardware_notes": {
+    "cpu": "Intel Core i9-11900",
+    "cuda_gpu": "GeForce RTX 3080"
+  },
+  "conditions": {
+    "input": "16 COCO val2017 JPEG images, batch 1, 640 x 640",
+    "scope": "JPEG decode, letterbox, forward including host/device transfers, and postprocessing",
+    "memory": "Host process RSS sampled at request boundaries. PyTorch CUDA allocator peaks are separate from process VRAM. ORT GPU VRAM peak was not measured.",
+    "parity": "One-to-one matching by class and IoU >= 0.50 on the same 16 JPEG images",
+    "limitations": [
+      "Shared CPU resources may affect timing.",
+      "ONNX CUDA uses FP32 with TF32 allowed.",
+      "TensorRT provider dependencies were unavailable."
+    ]
+  }
+}

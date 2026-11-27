@@ -1,0 +1,1620 @@
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "name": "COCO 2017",
+    "split": "val2017",
+    "imageCount": 5000,
+    "annotationCount": 36781,
+    "categoryCount": 80,
+    "crowdAnnotationCount": 446,
+    "annotationsSha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f"
+  },
+  "protocol": {
+    "task": "bbox",
+    "inputSize": [
+      640,
+      640
+    ],
+    "scoreFloor": 0.001,
+    "nmsIou": 0.7,
+    "candidateLimitPerImage": 300,
+    "maxDets": [
+      1,
+      10,
+      100
+    ],
+    "ious": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "recallPoints": [
+      0.0,
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.11,
+      0.12,
+      0.13,
+      0.14,
+      0.15,
+      0.16,
+      0.17,
+      0.18,
+      0.19,
+      0.2,
+      0.21,
+      0.22,
+      0.23,
+      0.24,
+      0.25,
+      0.26,
+      0.27,
+      0.28,
+      0.29,
+      0.3,
+      0.31,
+      0.32,
+      0.33,
+      0.34,
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.39,
+      0.4,
+      0.41,
+      0.42,
+      0.43,
+      0.44,
+      0.45,
+      0.46,
+      0.47,
+      0.48,
+      0.49,
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      1.0
+    ],
+    "operatingPoints": [
+      0.1,
+      0.25,
+      0.35,
+      0.5,
+      0.75
+    ],
+    "operatingPointIou": 0.5,
+    "pycocotoolsVersion": "2.0.11"
+  },
+  "models": {
+    "nms": {
+      "imagesEvaluated": 5000,
+      "torchDetections": 445744,
+      "onnxDetections": 445733,
+      "torchAggregate": {
+        "ap": 0.4852264994291881,
+        "ap50": 0.6593739203005661,
+        "ap75": 0.5243460601115234,
+        "apSmall": 0.308000469642097,
+        "apMedium": 0.5363890712186198,
+        "apLarge": 0.6499346148325543,
+        "ar1": 0.36241954221157857,
+        "ar10": 0.5929115958534357,
+        "ar100": 0.6398901338455938,
+        "arSmall": 0.45133843551284303,
+        "arMedium": 0.6940790965143259,
+        "arLarge": 0.7865774588852283
+      },
+      "onnxAggregate": {
+        "ap": 0.4852268512757772,
+        "ap50": 0.6593744471406787,
+        "ap75": 0.5243464075767654,
+        "apSmall": 0.3080006560177255,
+        "apMedium": 0.5363890482360345,
+        "apLarge": 0.6499348114749295,
+        "ar1": 0.36241954221157857,
+        "ar10": 0.5929115958534357,
+        "ar100": 0.6398901338455938,
+        "arSmall": 0.45133843551284303,
+        "arMedium": 0.6940790965143259,
+        "arLarge": 0.7865774588852283
+      },
+      "onnxMinusTorchPoints": {
+        "ap": 3.5184658908615773e-05,
+        "ap50": 5.268401126468092e-05,
+        "ap75": 3.4746524202322604e-05,
+        "apSmall": 1.86375628541402e-05,
+        "apMedium": -2.2982585279329726e-06,
+        "apLarge": 1.9664237516092697e-05,
+        "ar1": 0.0,
+        "ar10": 0.0,
+        "ar100": 0.0,
+        "arSmall": 0.0,
+        "arMedium": 0.0,
+        "arLarge": 0.0
+      },
+      "torchOperatingPoints": [
+        {
+          "threshold": 0.1,
+          "tp": 26451,
+          "fp": 21428,
+          "fn": 9884,
+          "precision": 0.552455147350613,
+          "recall": 0.7279757809274804,
+          "f1": 0.6281853373548341
+        },
+        {
+          "threshold": 0.25,
+          "tp": 23059,
+          "fp": 7906,
+          "fn": 13276,
+          "precision": 0.7446794768286775,
+          "recall": 0.634622265033714,
+          "f1": 0.6852600297176821
+        },
+        {
+          "threshold": 0.35,
+          "tp": 21153,
+          "fp": 4847,
+          "fn": 15182,
+          "precision": 0.8135769230769231,
+          "recall": 0.582165955690106,
+          "f1": 0.6786877356220422
+        },
+        {
+          "threshold": 0.5,
+          "tp": 18185,
+          "fp": 2406,
+          "fn": 18150,
+          "precision": 0.8831528337623233,
+          "recall": 0.5004816292830604,
+          "f1": 0.6388996240733584
+        },
+        {
+          "threshold": 0.75,
+          "tp": 11466,
+          "fp": 537,
+          "fn": 24869,
+          "precision": 0.955261184703824,
+          "recall": 0.3155635062611807,
+          "f1": 0.4744093673714262
+        }
+      ],
+      "onnxOperatingPoints": [
+        {
+          "threshold": 0.1,
+          "tp": 26451,
+          "fp": 21428,
+          "fn": 9884,
+          "precision": 0.552455147350613,
+          "recall": 0.7279757809274804,
+          "f1": 0.6281853373548341
+        },
+        {
+          "threshold": 0.25,
+          "tp": 23059,
+          "fp": 7906,
+          "fn": 13276,
+          "precision": 0.7446794768286775,
+          "recall": 0.634622265033714,
+          "f1": 0.6852600297176821
+        },
+        {
+          "threshold": 0.35,
+          "tp": 21153,
+          "fp": 4847,
+          "fn": 15182,
+          "precision": 0.8135769230769231,
+          "recall": 0.582165955690106,
+          "f1": 0.6786877356220422
+        },
+        {
+          "threshold": 0.5,
+          "tp": 18185,
+          "fp": 2406,
+          "fn": 18150,
+          "precision": 0.8831528337623233,
+          "recall": 0.5004816292830604,
+          "f1": 0.6388996240733584
+        },
+        {
+          "threshold": 0.75,
+          "tp": 11466,
+          "fp": 537,
+          "fn": 24869,
+          "precision": 0.955261184703824,
+          "recall": 0.3155635062611807,
+          "f1": 0.4744093673714262
+        }
+      ],
+      "classes": [
+        {
+          "id": 1,
+          "name": "person",
+          "torchAp": 0.6050546045755271,
+          "onnxAp": 0.6050545774759921,
+          "onnxMinusTorchApPoints": -2.709953494939299e-06
+        },
+        {
+          "id": 2,
+          "name": "bicycle",
+          "torchAp": 0.3700901750776504,
+          "onnxAp": 0.3700902011110479,
+          "onnxMinusTorchApPoints": 2.6033397493296917e-06
+        },
+        {
+          "id": 3,
+          "name": "car",
+          "torchAp": 0.481490026026681,
+          "onnxAp": 0.4814906287060777,
+          "onnxMinusTorchApPoints": 6.0267939666625026e-05
+        },
+        {
+          "id": 4,
+          "name": "motorcycle",
+          "torchAp": 0.5080596088352377,
+          "onnxAp": 0.5080596263041172,
+          "onnxMinusTorchApPoints": 1.7468879454085595e-06
+        },
+        {
+          "id": 5,
+          "name": "airplane",
+          "torchAp": 0.738192453006475,
+          "onnxAp": 0.738192453006475,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 6,
+          "name": "bus",
+          "torchAp": 0.7118289897435403,
+          "onnxAp": 0.7118291381778131,
+          "onnxMinusTorchApPoints": 1.4843427287303257e-05
+        },
+        {
+          "id": 7,
+          "name": "train",
+          "torchAp": 0.7482718998389488,
+          "onnxAp": 0.7482831251429798,
+          "onnxMinusTorchApPoints": 0.0011225304030970662
+        },
+        {
+          "id": 8,
+          "name": "truck",
+          "torchAp": 0.38343300303672506,
+          "onnxAp": 0.38344493246897415,
+          "onnxMinusTorchApPoints": 0.0011929432249091487
+        },
+        {
+          "id": 9,
+          "name": "boat",
+          "torchAp": 0.33242880259225027,
+          "onnxAp": 0.332428775417049,
+          "onnxMinusTorchApPoints": -2.7175201255946746e-06
+        },
+        {
+          "id": 10,
+          "name": "traffic light",
+          "torchAp": 0.31175371318067613,
+          "onnxAp": 0.3117537166711729,
+          "onnxMinusTorchApPoints": 3.490496780500507e-07
+        },
+        {
+          "id": 11,
+          "name": "fire hydrant",
+          "torchAp": 0.7404618493926927,
+          "onnxAp": 0.7404618493926927,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 13,
+          "name": "stop sign",
+          "torchAp": 0.7054193519125943,
+          "onnxAp": 0.7054193519125943,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 14,
+          "name": "parking meter",
+          "torchAp": 0.5431134165878064,
+          "onnxAp": 0.5431134165878064,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 15,
+          "name": "bench",
+          "torchAp": 0.3094820436886858,
+          "onnxAp": 0.3094818666503539,
+          "onnxMinusTorchApPoints": -1.77038331938828e-05
+        },
+        {
+          "id": 16,
+          "name": "bird",
+          "torchAp": 0.41044740001258195,
+          "onnxAp": 0.4104477538169484,
+          "onnxMinusTorchApPoints": 3.5380436647081126e-05
+        },
+        {
+          "id": 17,
+          "name": "cat",
+          "torchAp": 0.7312326226098204,
+          "onnxAp": 0.7312326226098204,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 18,
+          "name": "dog",
+          "torchAp": 0.6825373382814919,
+          "onnxAp": 0.6825373382814919,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 19,
+          "name": "horse",
+          "torchAp": 0.6574812580720825,
+          "onnxAp": 0.6574812580720825,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 20,
+          "name": "sheep",
+          "torchAp": 0.604850783705527,
+          "onnxAp": 0.604850783705527,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 21,
+          "name": "cow",
+          "torchAp": 0.5986727065795202,
+          "onnxAp": 0.5986727065795202,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 22,
+          "name": "elephant",
+          "torchAp": 0.7119604158830267,
+          "onnxAp": 0.7119604158830267,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 23,
+          "name": "bear",
+          "torchAp": 0.7376738365083255,
+          "onnxAp": 0.7376738365083255,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 24,
+          "name": "zebra",
+          "torchAp": 0.729813137742238,
+          "onnxAp": 0.729813137742238,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 25,
+          "name": "giraffe",
+          "torchAp": 0.7332102640734913,
+          "onnxAp": 0.7332102640734913,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 27,
+          "name": "backpack",
+          "torchAp": 0.1591041069146455,
+          "onnxAp": 0.15910413486763922,
+          "onnxMinusTorchApPoints": 2.7952993725266495e-06
+        },
+        {
+          "id": 28,
+          "name": "umbrella",
+          "torchAp": 0.5027330599415181,
+          "onnxAp": 0.5027330599415181,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 31,
+          "name": "handbag",
+          "torchAp": 0.20834136121799054,
+          "onnxAp": 0.20834135502822906,
+          "onnxMinusTorchApPoints": -6.189761481145695e-07
+        },
+        {
+          "id": 32,
+          "name": "tie",
+          "torchAp": 0.39345145315944197,
+          "onnxAp": 0.39345145315944197,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 33,
+          "name": "suitcase",
+          "torchAp": 0.5012674723492612,
+          "onnxAp": 0.501266964133318,
+          "onnxMinusTorchApPoints": -5.0821594321792674e-05
+        },
+        {
+          "id": 34,
+          "name": "frisbee",
+          "torchAp": 0.7088101792831416,
+          "onnxAp": 0.7088101792831416,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 35,
+          "name": "skis",
+          "torchAp": 0.29805987673384404,
+          "onnxAp": 0.29805987710252185,
+          "onnxMinusTorchApPoints": 3.6867781050275994e-08
+        },
+        {
+          "id": 36,
+          "name": "snowboard",
+          "torchAp": 0.4438555973808952,
+          "onnxAp": 0.4438555973808952,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 37,
+          "name": "sports ball",
+          "torchAp": 0.4813241092980106,
+          "onnxAp": 0.4813241092980106,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 38,
+          "name": "kite",
+          "torchAp": 0.5052378880959234,
+          "onnxAp": 0.5052378880959234,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 39,
+          "name": "baseball bat",
+          "torchAp": 0.43862552358507156,
+          "onnxAp": 0.4386269685870686,
+          "onnxMinusTorchApPoints": 0.0001445001997057993
+        },
+        {
+          "id": 40,
+          "name": "baseball glove",
+          "torchAp": 0.445143002895735,
+          "onnxAp": 0.4451425607230654,
+          "onnxMinusTorchApPoints": -4.4217266959023505e-05
+        },
+        {
+          "id": 41,
+          "name": "skateboard",
+          "torchAp": 0.6103520544114908,
+          "onnxAp": 0.6103520544114908,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 42,
+          "name": "surfboard",
+          "torchAp": 0.4425066184446129,
+          "onnxAp": 0.4425066184446129,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 43,
+          "name": "tennis racket",
+          "torchAp": 0.6022882839037662,
+          "onnxAp": 0.6022882839037662,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 44,
+          "name": "bottle",
+          "torchAp": 0.4340979886001388,
+          "onnxAp": 0.4340988997949305,
+          "onnxMinusTorchApPoints": 9.111947916751184e-05
+        },
+        {
+          "id": 46,
+          "name": "wine glass",
+          "torchAp": 0.42775136504186984,
+          "onnxAp": 0.42775136504186984,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 47,
+          "name": "cup",
+          "torchAp": 0.47638462685570104,
+          "onnxAp": 0.47638459939578254,
+          "onnxMinusTorchApPoints": -2.745991850572338e-06
+        },
+        {
+          "id": 48,
+          "name": "fork",
+          "torchAp": 0.4210939666459274,
+          "onnxAp": 0.4210939666459274,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 49,
+          "name": "knife",
+          "torchAp": 0.2468443638044301,
+          "onnxAp": 0.2468443638044301,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 50,
+          "name": "spoon",
+          "torchAp": 0.2695440295170617,
+          "onnxAp": 0.2695440295170617,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 51,
+          "name": "bowl",
+          "torchAp": 0.48615547049214863,
+          "onnxAp": 0.486155455944115,
+          "onnxMinusTorchApPoints": -1.4548033611117006e-06
+        },
+        {
+          "id": 52,
+          "name": "banana",
+          "torchAp": 0.30065313013034145,
+          "onnxAp": 0.30065321443144405,
+          "onnxMinusTorchApPoints": 8.430110259860513e-06
+        },
+        {
+          "id": 53,
+          "name": "apple",
+          "torchAp": 0.25182166091240354,
+          "onnxAp": 0.25182166091240354,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 54,
+          "name": "sandwich",
+          "torchAp": 0.4128144353880999,
+          "onnxAp": 0.4128144353880999,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 55,
+          "name": "orange",
+          "torchAp": 0.33504536934934886,
+          "onnxAp": 0.33504536934934886,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 56,
+          "name": "broccoli",
+          "torchAp": 0.2696200467550566,
+          "onnxAp": 0.2696200467550566,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 57,
+          "name": "carrot",
+          "torchAp": 0.30108649851576924,
+          "onnxAp": 0.3010867659048175,
+          "onnxMinusTorchApPoints": 2.673890482363106e-05
+        },
+        {
+          "id": 58,
+          "name": "hot dog",
+          "torchAp": 0.4223959786432522,
+          "onnxAp": 0.4223959786432522,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 59,
+          "name": "pizza",
+          "torchAp": 0.5812359891822549,
+          "onnxAp": 0.5812359891822549,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 60,
+          "name": "donut",
+          "torchAp": 0.5475351367953566,
+          "onnxAp": 0.5475351367953566,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 61,
+          "name": "cake",
+          "torchAp": 0.4536408248753303,
+          "onnxAp": 0.45364087764208266,
+          "onnxMinusTorchApPoints": 5.27667523564368e-06
+        },
+        {
+          "id": 62,
+          "name": "chair",
+          "torchAp": 0.36928468017697974,
+          "onnxAp": 0.3692846460285229,
+          "onnxMinusTorchApPoints": -3.414845684002188e-06
+        },
+        {
+          "id": 63,
+          "name": "couch",
+          "torchAp": 0.4895194469223939,
+          "onnxAp": 0.48952106762372527,
+          "onnxMinusTorchApPoints": 0.0001620701331361829
+        },
+        {
+          "id": 64,
+          "name": "potted plant",
+          "torchAp": 0.32946052783639307,
+          "onnxAp": 0.32946082816242234,
+          "onnxMinusTorchApPoints": 3.003260292677723e-05
+        },
+        {
+          "id": 65,
+          "name": "bed",
+          "torchAp": 0.5251635715520792,
+          "onnxAp": 0.5251639367089433,
+          "onnxMinusTorchApPoints": 3.6515686419047455e-05
+        },
+        {
+          "id": 67,
+          "name": "dining table",
+          "torchAp": 0.3625941101765105,
+          "onnxAp": 0.3625944539791123,
+          "onnxMinusTorchApPoints": 3.438026017765772e-05
+        },
+        {
+          "id": 70,
+          "name": "toilet",
+          "torchAp": 0.7162615345575972,
+          "onnxAp": 0.7162615345575972,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 72,
+          "name": "tv",
+          "torchAp": 0.6340991369512571,
+          "onnxAp": 0.6340991369512571,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 73,
+          "name": "laptop",
+          "torchAp": 0.6763089101317573,
+          "onnxAp": 0.6763089101317573,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 74,
+          "name": "mouse",
+          "torchAp": 0.6389720718680468,
+          "onnxAp": 0.6389720718680468,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 75,
+          "name": "remote",
+          "torchAp": 0.39206025076560924,
+          "onnxAp": 0.39206025076560924,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 76,
+          "name": "keyboard",
+          "torchAp": 0.5702223629302677,
+          "onnxAp": 0.5702223629302677,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 77,
+          "name": "cell phone",
+          "torchAp": 0.4043548050119692,
+          "onnxAp": 0.4043548050119692,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 78,
+          "name": "microwave",
+          "torchAp": 0.6631486209931994,
+          "onnxAp": 0.6631486209931994,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 79,
+          "name": "oven",
+          "torchAp": 0.43159617814906875,
+          "onnxAp": 0.43159617814906875,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 80,
+          "name": "toaster",
+          "torchAp": 0.551914191419142,
+          "onnxAp": 0.551914191419142,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 81,
+          "name": "sink",
+          "torchAp": 0.4438704405875517,
+          "onnxAp": 0.443870298689177,
+          "onnxMinusTorchApPoints": -1.4189837471700883e-05
+        },
+        {
+          "id": 82,
+          "name": "refrigerator",
+          "torchAp": 0.6803404591344065,
+          "onnxAp": 0.6803404591344065,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 84,
+          "name": "book",
+          "torchAp": 0.17993706137295354,
+          "onnxAp": 0.1799368894370321,
+          "onnxMinusTorchApPoints": -1.7193592144471026e-05
+        },
+        {
+          "id": 85,
+          "name": "clock",
+          "torchAp": 0.5353958746137368,
+          "onnxAp": 0.5353958746137368,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 86,
+          "name": "vase",
+          "torchAp": 0.42159030239507733,
+          "onnxAp": 0.42159030239507733,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 87,
+          "name": "scissors",
+          "torchAp": 0.38870554996970985,
+          "onnxAp": 0.38870554996970985,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 88,
+          "name": "teddy bear",
+          "torchAp": 0.5249859807349971,
+          "onnxAp": 0.5249859807349971,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 89,
+          "name": "hair drier",
+          "torchAp": 0.09451596892944289,
+          "onnxAp": 0.09451596892944289,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 90,
+          "name": "toothbrush",
+          "torchAp": 0.32803674707146635,
+          "onnxAp": 0.32803674707146635,
+          "onnxMinusTorchApPoints": 0.0
+        }
+      ],
+      "torchPredictionsSha256": "e4b3d8d3606afab747cc9d96dc77469398e3d0ac44b43134187b2eb2bd33187a",
+      "threshold035DetectionParity": {
+        "images": 5000,
+        "orderMatchedImages": 4999,
+        "countMatchedImages": 5000,
+        "orderMatchedBoxesCompared": 26695,
+        "scoreAbsDeltaMax": 7.212162017822266e-06,
+        "xywhAbsDeltaMaxPixels": 0.00079345703125,
+        "onnxDetections": 26703,
+        "torchDetections": 26703
+      },
+      "onnxPredictionsSha256": "78aa06b772c3a404c67ce8e2a526503d0729cab433918f144e83f00e6996d881",
+      "archivedExportParity": {
+        "status": "passed",
+        "images": 8,
+        "maxBoxAbsError": 0.007659912109375,
+        "maxScoreAbsError": 2.6106834411621094e-05
+      }
+    },
+    "nms_free": {
+      "imagesEvaluated": 5000,
+      "torchDetections": 571140,
+      "onnxDetections": 571129,
+      "torchAggregate": {
+        "ap": 0.4875774224966335,
+        "ap50": 0.6610335904829692,
+        "ap75": 0.5294930310423493,
+        "apSmall": 0.3115399950926549,
+        "apMedium": 0.5335424058420376,
+        "apLarge": 0.6463155377275719,
+        "ar1": 0.3724136749248542,
+        "ar10": 0.619097091940508,
+        "ar100": 0.6807561399667732,
+        "arSmall": 0.5089330417933446,
+        "arMedium": 0.7277252247435283,
+        "arLarge": 0.8230433827482622
+      },
+      "onnxAggregate": {
+        "ap": 0.4875773421947616,
+        "ap50": 0.6610340523534011,
+        "ap75": 0.529493020914538,
+        "apSmall": 0.3115398949792067,
+        "apMedium": 0.5335432105610393,
+        "apLarge": 0.6463155773354673,
+        "ar1": 0.3724136749248542,
+        "ar10": 0.619097091940508,
+        "ar100": 0.6807561399667732,
+        "arSmall": 0.5089330417933446,
+        "arMedium": 0.7277252247435283,
+        "arLarge": 0.8230433827482622
+      },
+      "onnxMinusTorchPoints": {
+        "ap": -8.030187187424431e-06,
+        "ap50": 4.618704319003797e-05,
+        "ap75": -1.0127811367333095e-06,
+        "apSmall": -1.0011344819815804e-05,
+        "apMedium": 8.047190016569061e-05,
+        "apLarge": 3.960789540791154e-06,
+        "ar1": 0.0,
+        "ar10": 0.0,
+        "ar100": 0.0,
+        "arSmall": 0.0,
+        "arMedium": 0.0,
+        "arLarge": 0.0
+      },
+      "torchOperatingPoints": [
+        {
+          "threshold": 0.1,
+          "tp": 25855,
+          "fp": 19356,
+          "fn": 10480,
+          "precision": 0.5718741014354913,
+          "recall": 0.7115728636301087,
+          "f1": 0.6341206190371079
+        },
+        {
+          "threshold": 0.25,
+          "tp": 22405,
+          "fp": 7179,
+          "fn": 13930,
+          "precision": 0.757335045970795,
+          "recall": 0.6166230906839136,
+          "f1": 0.6797736616150124
+        },
+        {
+          "threshold": 0.35,
+          "tp": 20589,
+          "fp": 4517,
+          "fn": 15746,
+          "precision": 0.8200828487214211,
+          "recall": 0.5666437319389019,
+          "f1": 0.6702039354828209
+        },
+        {
+          "threshold": 0.5,
+          "tp": 18034,
+          "fp": 2344,
+          "fn": 18301,
+          "precision": 0.8849739915595249,
+          "recall": 0.496325856612082,
+          "f1": 0.6359741152822104
+        },
+        {
+          "threshold": 0.75,
+          "tp": 12731,
+          "fp": 651,
+          "fn": 23604,
+          "precision": 0.9513525631445225,
+          "recall": 0.3503784230081189,
+          "f1": 0.5121387050707001
+        }
+      ],
+      "onnxOperatingPoints": [
+        {
+          "threshold": 0.1,
+          "tp": 25855,
+          "fp": 19357,
+          "fn": 10480,
+          "precision": 0.5718614527116694,
+          "recall": 0.7115728636301087,
+          "f1": 0.6341128429004133
+        },
+        {
+          "threshold": 0.25,
+          "tp": 22405,
+          "fp": 7179,
+          "fn": 13930,
+          "precision": 0.757335045970795,
+          "recall": 0.6166230906839136,
+          "f1": 0.6797736616150124
+        },
+        {
+          "threshold": 0.35,
+          "tp": 20589,
+          "fp": 4517,
+          "fn": 15746,
+          "precision": 0.8200828487214211,
+          "recall": 0.5666437319389019,
+          "f1": 0.6702039354828209
+        },
+        {
+          "threshold": 0.5,
+          "tp": 18034,
+          "fp": 2344,
+          "fn": 18301,
+          "precision": 0.8849739915595249,
+          "recall": 0.496325856612082,
+          "f1": 0.6359741152822104
+        },
+        {
+          "threshold": 0.75,
+          "tp": 12731,
+          "fp": 651,
+          "fn": 23604,
+          "precision": 0.9513525631445225,
+          "recall": 0.3503784230081189,
+          "f1": 0.5121387050707001
+        }
+      ],
+      "classes": [
+        {
+          "id": 1,
+          "name": "person",
+          "torchAp": 0.608202363343356,
+          "onnxAp": 0.6082022383036708,
+          "onnxMinusTorchApPoints": -1.2503968516153208e-05
+        },
+        {
+          "id": 2,
+          "name": "bicycle",
+          "torchAp": 0.37290550184758975,
+          "onnxAp": 0.37290549076795104,
+          "onnxMinusTorchApPoints": -1.1079638706501527e-06
+        },
+        {
+          "id": 3,
+          "name": "car",
+          "torchAp": 0.48911609722795724,
+          "onnxAp": 0.4891163090678198,
+          "onnxMinusTorchApPoints": 2.1183986254058595e-05
+        },
+        {
+          "id": 4,
+          "name": "motorcycle",
+          "torchAp": 0.5097919288499715,
+          "onnxAp": 0.5097918561576182,
+          "onnxMinusTorchApPoints": -7.269235324791623e-06
+        },
+        {
+          "id": 5,
+          "name": "airplane",
+          "torchAp": 0.7322339323778942,
+          "onnxAp": 0.7322339323778942,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 6,
+          "name": "bus",
+          "torchAp": 0.7202886683767203,
+          "onnxAp": 0.7202886683767203,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 7,
+          "name": "train",
+          "torchAp": 0.749271403281883,
+          "onnxAp": 0.7492723143912355,
+          "onnxMinusTorchApPoints": 9.111093525193681e-05
+        },
+        {
+          "id": 8,
+          "name": "truck",
+          "torchAp": 0.42270901717154735,
+          "onnxAp": 0.4227090282635949,
+          "onnxMinusTorchApPoints": 1.109204755822546e-06
+        },
+        {
+          "id": 9,
+          "name": "boat",
+          "torchAp": 0.3180307861967022,
+          "onnxAp": 0.31803082937135296,
+          "onnxMinusTorchApPoints": 4.317465074343829e-06
+        },
+        {
+          "id": 10,
+          "name": "traffic light",
+          "torchAp": 0.3172172921527357,
+          "onnxAp": 0.31721734713785754,
+          "onnxMinusTorchApPoints": 5.498512184454185e-06
+        },
+        {
+          "id": 11,
+          "name": "fire hydrant",
+          "torchAp": 0.7445772286415658,
+          "onnxAp": 0.7445772286415658,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 13,
+          "name": "stop sign",
+          "torchAp": 0.7164508564396794,
+          "onnxAp": 0.7164508564396794,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 14,
+          "name": "parking meter",
+          "torchAp": 0.5382697720109754,
+          "onnxAp": 0.5382697720109754,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 15,
+          "name": "bench",
+          "torchAp": 0.3077563251357008,
+          "onnxAp": 0.3077563271794271,
+          "onnxMinusTorchApPoints": 2.0437262993056038e-07
+        },
+        {
+          "id": 16,
+          "name": "bird",
+          "torchAp": 0.4145657837538975,
+          "onnxAp": 0.41456564061385637,
+          "onnxMinusTorchApPoints": -1.4314004115334455e-05
+        },
+        {
+          "id": 17,
+          "name": "cat",
+          "torchAp": 0.750023974226508,
+          "onnxAp": 0.750023974226508,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 18,
+          "name": "dog",
+          "torchAp": 0.6957751080356139,
+          "onnxAp": 0.6957751080356139,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 19,
+          "name": "horse",
+          "torchAp": 0.6638326249664823,
+          "onnxAp": 0.6638326249664823,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 20,
+          "name": "sheep",
+          "torchAp": 0.5976824994381974,
+          "onnxAp": 0.5976824994381974,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 21,
+          "name": "cow",
+          "torchAp": 0.6276405684979136,
+          "onnxAp": 0.6276405684979136,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 22,
+          "name": "elephant",
+          "torchAp": 0.7153901683825954,
+          "onnxAp": 0.7153901683825954,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 23,
+          "name": "bear",
+          "torchAp": 0.7580139492749404,
+          "onnxAp": 0.7580139492749404,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 24,
+          "name": "zebra",
+          "torchAp": 0.737377998416219,
+          "onnxAp": 0.737377998416219,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 25,
+          "name": "giraffe",
+          "torchAp": 0.7365844122292248,
+          "onnxAp": 0.7365841528118245,
+          "onnxMinusTorchApPoints": -2.594174002279459e-05
+        },
+        {
+          "id": 27,
+          "name": "backpack",
+          "torchAp": 0.18358289995701121,
+          "onnxAp": 0.1835829022309422,
+          "onnxMinusTorchApPoints": 2.2739309879504788e-07
+        },
+        {
+          "id": 28,
+          "name": "umbrella",
+          "torchAp": 0.4937012895169761,
+          "onnxAp": 0.4937012066323423,
+          "onnxMinusTorchApPoints": -8.288463382299938e-06
+        },
+        {
+          "id": 31,
+          "name": "handbag",
+          "torchAp": 0.2077675427724792,
+          "onnxAp": 0.20776754547591206,
+          "onnxMinusTorchApPoints": 2.703432866457689e-07
+        },
+        {
+          "id": 32,
+          "name": "tie",
+          "torchAp": 0.3920624416375914,
+          "onnxAp": 0.3920627380353225,
+          "onnxMinusTorchApPoints": 2.9639773108103284e-05
+        },
+        {
+          "id": 33,
+          "name": "suitcase",
+          "torchAp": 0.5128639241289621,
+          "onnxAp": 0.5128639241289621,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 34,
+          "name": "frisbee",
+          "torchAp": 0.7149434822899586,
+          "onnxAp": 0.7149434822899586,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 35,
+          "name": "skis",
+          "torchAp": 0.30556309532819137,
+          "onnxAp": 0.3055631127319416,
+          "onnxMinusTorchApPoints": 1.7403750218747405e-06
+        },
+        {
+          "id": 36,
+          "name": "snowboard",
+          "torchAp": 0.46398161643898655,
+          "onnxAp": 0.46398161643898655,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 37,
+          "name": "sports ball",
+          "torchAp": 0.48976270703910213,
+          "onnxAp": 0.48976270703910213,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 38,
+          "name": "kite",
+          "torchAp": 0.49752238649573083,
+          "onnxAp": 0.49752238649573083,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 39,
+          "name": "baseball bat",
+          "torchAp": 0.4317381726951037,
+          "onnxAp": 0.43173824173305697,
+          "onnxMinusTorchApPoints": 6.903795329860074e-06
+        },
+        {
+          "id": 40,
+          "name": "baseball glove",
+          "torchAp": 0.4334877557315723,
+          "onnxAp": 0.43348731692815473,
+          "onnxMinusTorchApPoints": -4.3880341754620744e-05
+        },
+        {
+          "id": 41,
+          "name": "skateboard",
+          "torchAp": 0.6097340065523681,
+          "onnxAp": 0.6097340065523681,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 42,
+          "name": "surfboard",
+          "torchAp": 0.4402875811172104,
+          "onnxAp": 0.4402875652913532,
+          "onnxMinusTorchApPoints": -1.5825857180296055e-06
+        },
+        {
+          "id": 43,
+          "name": "tennis racket",
+          "torchAp": 0.6027177861317679,
+          "onnxAp": 0.602717741457048,
+          "onnxMinusTorchApPoints": -4.467471981239868e-06
+        },
+        {
+          "id": 44,
+          "name": "bottle",
+          "torchAp": 0.44200953801584597,
+          "onnxAp": 0.442009520774485,
+          "onnxMinusTorchApPoints": -1.72413609500488e-06
+        },
+        {
+          "id": 46,
+          "name": "wine glass",
+          "torchAp": 0.4330180702016138,
+          "onnxAp": 0.4330180702016138,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 47,
+          "name": "cup",
+          "torchAp": 0.4921259573693525,
+          "onnxAp": 0.4921284659022714,
+          "onnxMinusTorchApPoints": 0.00025085329188878625
+        },
+        {
+          "id": 48,
+          "name": "fork",
+          "torchAp": 0.4245199031702987,
+          "onnxAp": 0.4245199031702987,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 49,
+          "name": "knife",
+          "torchAp": 0.26003735994554755,
+          "onnxAp": 0.2600375044463324,
+          "onnxMinusTorchApPoints": 1.445007848377422e-05
+        },
+        {
+          "id": 50,
+          "name": "spoon",
+          "torchAp": 0.269745559302891,
+          "onnxAp": 0.26974374577835764,
+          "onnxMinusTorchApPoints": -0.00018135245333783523
+        },
+        {
+          "id": 51,
+          "name": "bowl",
+          "torchAp": 0.4832259355366445,
+          "onnxAp": 0.4832260277786194,
+          "onnxMinusTorchApPoints": 9.22419748916603e-06
+        },
+        {
+          "id": 52,
+          "name": "banana",
+          "torchAp": 0.28585875589535814,
+          "onnxAp": 0.28585875589535814,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 53,
+          "name": "apple",
+          "torchAp": 0.2444857678101761,
+          "onnxAp": 0.2444857678101761,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 54,
+          "name": "sandwich",
+          "torchAp": 0.41678068706855476,
+          "onnxAp": 0.4167805070005597,
+          "onnxMinusTorchApPoints": -1.800679950703099e-05
+        },
+        {
+          "id": 55,
+          "name": "orange",
+          "torchAp": 0.32668743351858015,
+          "onnxAp": 0.32668749076816833,
+          "onnxMinusTorchApPoints": 5.72495881812074e-06
+        },
+        {
+          "id": 56,
+          "name": "broccoli",
+          "torchAp": 0.2620421735745378,
+          "onnxAp": 0.2620421735745378,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 57,
+          "name": "carrot",
+          "torchAp": 0.2782687890350989,
+          "onnxAp": 0.2782687890350989,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 58,
+          "name": "hot dog",
+          "torchAp": 0.4591031912761531,
+          "onnxAp": 0.4591031000661478,
+          "onnxMinusTorchApPoints": -9.121000532630319e-06
+        },
+        {
+          "id": 59,
+          "name": "pizza",
+          "torchAp": 0.5822547965819248,
+          "onnxAp": 0.5822547965819248,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 60,
+          "name": "donut",
+          "torchAp": 0.5733701835028959,
+          "onnxAp": 0.5733699432961606,
+          "onnxMinusTorchApPoints": -2.4020673528024616e-05
+        },
+        {
+          "id": 61,
+          "name": "cake",
+          "torchAp": 0.46392036113289054,
+          "onnxAp": 0.4639114573455166,
+          "onnxMinusTorchApPoints": -0.0008903787373948369
+        },
+        {
+          "id": 62,
+          "name": "chair",
+          "torchAp": 0.3679832227832903,
+          "onnxAp": 0.3679833671260576,
+          "onnxMinusTorchApPoints": 1.4434276729424766e-05
+        },
+        {
+          "id": 63,
+          "name": "couch",
+          "torchAp": 0.4903456112836549,
+          "onnxAp": 0.49033995400038655,
+          "onnxMinusTorchApPoints": -0.000565728326834547
+        },
+        {
+          "id": 64,
+          "name": "potted plant",
+          "torchAp": 0.31983735033848437,
+          "onnxAp": 0.3198440815071803,
+          "onnxMinusTorchApPoints": 0.0006731168695928158
+        },
+        {
+          "id": 65,
+          "name": "bed",
+          "torchAp": 0.519060029617324,
+          "onnxAp": 0.5190600322913773,
+          "onnxMinusTorchApPoints": 2.6740533121127896e-07
+        },
+        {
+          "id": 67,
+          "name": "dining table",
+          "torchAp": 0.3499430120083045,
+          "onnxAp": 0.34994300168196957,
+          "onnxMinusTorchApPoints": -1.0326334953791871e-06
+        },
+        {
+          "id": 70,
+          "name": "toilet",
+          "torchAp": 0.7071985067047297,
+          "onnxAp": 0.7071985870047086,
+          "onnxMinusTorchApPoints": 8.029997888847618e-06
+        },
+        {
+          "id": 72,
+          "name": "tv",
+          "torchAp": 0.6292214264410575,
+          "onnxAp": 0.6292211088532661,
+          "onnxMinusTorchApPoints": -3.1758779139856586e-05
+        },
+        {
+          "id": 73,
+          "name": "laptop",
+          "torchAp": 0.6725072904498942,
+          "onnxAp": 0.6725076512505754,
+          "onnxMinusTorchApPoints": 3.608006812205744e-05
+        },
+        {
+          "id": 74,
+          "name": "mouse",
+          "torchAp": 0.6428827307706629,
+          "onnxAp": 0.6428827307706629,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 75,
+          "name": "remote",
+          "torchAp": 0.39196066419796327,
+          "onnxAp": 0.39196074785280743,
+          "onnxMinusTorchApPoints": 8.365484416295033e-06
+        },
+        {
+          "id": 76,
+          "name": "keyboard",
+          "torchAp": 0.5658207833395111,
+          "onnxAp": 0.5658207065685444,
+          "onnxMinusTorchApPoints": -7.677096669489458e-06
+        },
+        {
+          "id": 77,
+          "name": "cell phone",
+          "torchAp": 0.411154751309956,
+          "onnxAp": 0.4111539266164541,
+          "onnxMinusTorchApPoints": -8.24693501877416e-05
+        },
+        {
+          "id": 78,
+          "name": "microwave",
+          "torchAp": 0.6541852294916185,
+          "onnxAp": 0.6541852294916185,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 79,
+          "name": "oven",
+          "torchAp": 0.4273964540766586,
+          "onnxAp": 0.4273964540766586,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 80,
+          "name": "toaster",
+          "torchAp": 0.5811165731957812,
+          "onnxAp": 0.5811165731957812,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 81,
+          "name": "sink",
+          "torchAp": 0.44130593460280104,
+          "onnxAp": 0.44130588073406357,
+          "onnxMinusTorchApPoints": -5.386873747070808e-06
+        },
+        {
+          "id": 82,
+          "name": "refrigerator",
+          "torchAp": 0.6724562583074191,
+          "onnxAp": 0.6724562583074191,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 84,
+          "name": "book",
+          "torchAp": 0.17381744805011456,
+          "onnxAp": 0.17381765126797477,
+          "onnxMinusTorchApPoints": 2.0321786020627286e-05
+        },
+        {
+          "id": 85,
+          "name": "clock",
+          "torchAp": 0.5279725822826352,
+          "onnxAp": 0.5279725652382041,
+          "onnxMinusTorchApPoints": -1.7044431088741874e-06
+        },
+        {
+          "id": 86,
+          "name": "vase",
+          "torchAp": 0.4304462902855296,
+          "onnxAp": 0.4304464094074968,
+          "onnxMinusTorchApPoints": 1.191219671792254e-05
+        },
+        {
+          "id": 87,
+          "name": "scissors",
+          "torchAp": 0.3739364599738656,
+          "onnxAp": 0.3739364599738656,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 88,
+          "name": "teddy bear",
+          "torchAp": 0.536040402965737,
+          "onnxAp": 0.5360410965928059,
+          "onnxMinusTorchApPoints": 6.936270688928659e-05
+        },
+        {
+          "id": 89,
+          "name": "hair drier",
+          "torchAp": 0.07149742748598972,
+          "onnxAp": 0.07149742748598972,
+          "onnxMinusTorchApPoints": 0.0
+        },
+        {
+          "id": 90,
+          "name": "toothbrush",
+          "torchAp": 0.3272279487204413,
+          "onnxAp": 0.3272280782467378,
+          "onnxMinusTorchApPoints": 1.2952629646623137e-05
+        }
+      ],
+      "torchPredictionsSha256": "4aeaaa5ef2f790503c6f26236e8f6ef297d5637201c71b5b3cf1300948212870",
+      "threshold035DetectionParity": {
+        "images": 5000,
+        "orderMatchedImages": 5000,
+        "countMatchedImages": 5000,
+        "orderMatchedBoxesCompared": 25839,
+        "scoreAbsDeltaMax": 0.0002193450927734375,
+        "xywhAbsDeltaMaxPixels": 0.00091552734375,
+        "onnxDetections": 25839,
+        "torchDetections": 25839
+      },
+      "onnxPredictionsSha256": "0ff241905fbe5e3fd5a881f9d467e5b871a93e5e45e715d41ff17fe2a0e3cee9",
+      "archivedExportParity": {
+        "status": "passed",
+        "images": 8,
+        "maxBoxAbsError": 0.00250244140625,
+        "maxScoreAbsError": 1.6555190086364746e-05
+      }
+    }
+  },
+  "conditions": {
+    "torch": {
+      "version": "2.8.0+cu126",
+      "precision": "FP32",
+      "autocast": false,
+      "tf32": false,
+      "batchSize": 1,
+      "checkpointFormat": "Distributed .pt state dict",
+      "loader": "Verified handoff inference/person_camera/core.py"
+    },
+    "onnx": {
+      "version": "ONNX Runtime GPU 1.22.0",
+      "precision": "FP32",
+      "tf32": false,
+      "batchSize": 1,
+      "checkpointFormat": "Distributed .onnx graph with embedded parameters"
+    },
+    "sameDeviceByMode": true,
+    "devices": {
+      "nms": "NVIDIA GeForce RTX 2080",
+      "nms_free": "NVIDIA GeForce RTX 3080"
+    },
+    "sharedProductInputAndPostprocessing": true,
+    "localReference": "quality.json"
+  }
+}

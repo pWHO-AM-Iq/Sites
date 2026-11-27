@@ -1,0 +1,161 @@
+﻿model_id,category_id,category,ground_truth,ap50_95,ap50,ap75,ar100_pct,scope,status
+nms,1,person,10777,60.5055,84.0076,65.4787,70.2858,official_validation,measured
+nms,2,bicycle,314,37.009,62.5599,38.8943,53.9809,official_validation,measured
+nms,3,car,1918,48.1491,71.2771,52.0433,61.6267,official_validation,measured
+nms,4,motorcycle,367,50.806,76.0204,54.6639,63.8965,official_validation,measured
+nms,5,airplane,143,73.8192,90.2994,79.4681,82.5874,official_validation,measured
+nms,6,bus,283,71.1829,83.0728,77.4436,77.4912,official_validation,measured
+nms,7,train,190,74.8283,92.0753,80.9238,80.2632,official_validation,measured
+nms,8,truck,414,38.3445,53.9174,41.1498,55.4589,official_validation,measured
+nms,9,boat,424,33.2429,58.1257,31.8064,53.4906,official_validation,measured
+nms,10,traffic light,634,31.1754,58.3547,29.8644,49.2902,official_validation,measured
+nms,11,fire hydrant,101,74.0462,89.9633,81.6918,79.1089,official_validation,measured
+nms,13,stop sign,75,70.5419,78.3821,74.7039,77.6,official_validation,measured
+nms,14,parking meter,60,54.3113,66.8505,58.5097,65.1667,official_validation,measured
+nms,15,bench,411,30.9482,43.2262,33.0688,49.927,official_validation,measured
+nms,16,bird,427,41.0448,61.2521,43.7763,50.8899,official_validation,measured
+nms,17,cat,202,73.1233,89.137,77.021,79.604,official_validation,measured
+nms,18,dog,218,68.2537,79.2835,73.4456,75.7339,official_validation,measured
+nms,19,horse,272,65.7481,84.4352,72.3759,74.4853,official_validation,measured
+nms,20,sheep,354,60.4851,81.253,66.3236,72.1186,official_validation,measured
+nms,21,cow,372,59.8673,80.4096,65.0767,67.9032,official_validation,measured
+nms,22,elephant,252,71.196,89.2902,79.6031,82.7381,official_validation,measured
+nms,23,bear,71,73.7674,87.959,80.5407,80.7042,official_validation,measured
+nms,24,zebra,266,72.9813,92.9905,79.5009,80.6015,official_validation,measured
+nms,25,giraffe,232,73.321,90.8813,78.6898,81.3362,official_validation,measured
+nms,27,backpack,371,15.9104,28.7512,15.4259,40.0539,official_validation,measured
+nms,28,umbrella,407,50.2733,70.6002,55.6819,65.2088,official_validation,measured
+nms,31,handbag,540,20.8341,35.2729,20.8791,45.8148,official_validation,measured
+nms,32,tie,252,39.3451,59.7841,43.1755,54.0873,official_validation,measured
+nms,33,suitcase,299,50.1267,72.1449,53.6737,65.0836,official_validation,measured
+nms,34,frisbee,115,70.881,89.7463,82.5102,78.3478,official_validation,measured
+nms,35,skis,241,29.806,51.4052,26.7677,52.1577,official_validation,measured
+nms,36,snowboard,69,44.3856,59.2078,49.6349,57.1014,official_validation,measured
+nms,37,sports ball,260,48.1324,66.1273,54.8949,54.5385,official_validation,measured
+nms,38,kite,327,50.5238,70.0687,56.8057,65.8716,official_validation,measured
+nms,39,baseball bat,145,43.8627,67.745,48.4746,59.7931,official_validation,measured
+nms,40,baseball glove,148,44.5143,70.1434,48.996,58.1081,official_validation,measured
+nms,41,skateboard,179,61.0352,81.8111,65.8807,67.2067,official_validation,measured
+nms,42,surfboard,267,44.2507,66.4929,48.6136,56.8914,official_validation,measured
+nms,43,tennis racket,225,60.2288,84.2794,66.2914,70.1333,official_validation,measured
+nms,44,bottle,1013,43.4099,62.3493,48.5691,61.8756,official_validation,measured
+nms,46,wine glass,341,42.7751,63.6855,43.8705,55.7185,official_validation,measured
+nms,47,cup,895,47.6385,63.9275,52.3733,63.676,official_validation,measured
+nms,48,fork,215,42.1094,57.8871,45.2288,57.3023,official_validation,measured
+nms,49,knife,325,24.6844,39.2562,26.0816,44.1846,official_validation,measured
+nms,50,spoon,253,26.9544,39.4279,29.9462,49.9605,official_validation,measured
+nms,51,bowl,623,48.6155,63.5246,53.4093,67.9294,official_validation,measured
+nms,52,banana,370,30.0653,46.8878,31.8575,58.973,official_validation,measured
+nms,53,apple,236,25.1822,36.0975,27.8644,53.3898,official_validation,measured
+nms,54,sandwich,177,41.2814,53.9021,46.6127,62.4294,official_validation,measured
+nms,55,orange,285,33.5045,42.94,36.3153,59.6491,official_validation,measured
+nms,56,broccoli,312,26.962,44.7317,26.523,61.4103,official_validation,measured
+nms,57,carrot,365,30.1087,44.5394,32.5039,57.3699,official_validation,measured
+nms,58,hot dog,125,42.2396,53.1953,45.5003,53.2,official_validation,measured
+nms,59,pizza,284,58.1236,74.7122,63.1052,71.2676,official_validation,measured
+nms,60,donut,328,54.7535,68.435,61.2931,70.7317,official_validation,measured
+nms,61,cake,310,45.3641,67.0484,48.8928,63.8387,official_validation,measured
+nms,62,chair,1771,36.9285,55.2386,39.437,60.0282,official_validation,measured
+nms,63,couch,261,48.9521,64.442,49.0412,67.433,official_validation,measured
+nms,64,potted plant,342,32.9461,51.9496,36.8419,59.7076,official_validation,measured
+nms,65,bed,163,52.5164,69.6573,54.3808,71.411,official_validation,measured
+nms,67,dining table,695,36.2594,50.7689,38.0092,62.8633,official_validation,measured
+nms,70,toilet,179,71.6262,86.4928,78.7024,83.6872,official_validation,measured
+nms,72,tv,288,63.4099,81.9616,72.0112,75.9722,official_validation,measured
+nms,73,laptop,231,67.6309,79.7017,73.8893,75.1515,official_validation,measured
+nms,74,mouse,106,63.8972,80.1727,74.5174,74.2453,official_validation,measured
+nms,75,remote,283,39.206,58.9204,43.5064,57.9505,official_validation,measured
+nms,76,keyboard,153,57.0222,74.8545,60.8065,74.1176,official_validation,measured
+nms,77,cell phone,262,40.4355,59.7296,44.9406,55.5344,official_validation,measured
+nms,78,microwave,55,66.3149,82.2031,70.8357,76.1818,official_validation,measured
+nms,79,oven,143,43.1596,62.036,45.0189,65.3846,official_validation,measured
+nms,80,toaster,9,55.1914,75.5941,48.1848,63.3333,official_validation,measured
+nms,81,sink,225,44.387,65.1312,45.6083,64.7556,official_validation,measured
+nms,82,refrigerator,126,68.034,81.1623,76.6688,80.2381,official_validation,measured
+nms,84,book,1129,17.9937,32.4345,17.1749,47.2188,official_validation,measured
+nms,85,clock,267,53.5396,75.4079,61.3981,67.2659,official_validation,measured
+nms,86,vase,274,42.159,58.7886,46.8699,61.5693,official_validation,measured
+nms,87,scissors,36,38.8706,52.4859,44.2353,51.6667,official_validation,measured
+nms,88,teddy bear,190,52.4986,69.4394,55.1082,67.3684,official_validation,measured
+nms,89,hair drier,11,9.4516,18.4789,8.2384,33.6364,official_validation,measured
+nms,90,toothbrush,57,32.8037,46.7928,35.6292,52.807,official_validation,measured
+nms_free,1,person,10777,60.8202,84.006,66.0052,72.0711,official_validation,measured
+nms_free,2,bicycle,314,37.2905,61.9043,37.8587,57.7389,official_validation,measured
+nms_free,3,car,1918,48.9116,71.4619,53.023,66.4546,official_validation,measured
+nms_free,4,motorcycle,367,50.9792,76.2153,56.3732,67.139,official_validation,measured
+nms_free,5,airplane,143,73.2234,88.5846,78.803,83.007,official_validation,measured
+nms_free,6,bus,283,72.0289,84.052,78.1182,81.7668,official_validation,measured
+nms_free,7,train,190,74.9272,92.1695,82.3085,82.7368,official_validation,measured
+nms_free,8,truck,414,42.2709,58.7776,46.0475,75.6763,official_validation,measured
+nms_free,9,boat,424,31.8031,56.6424,30.26,54.6462,official_validation,measured
+nms_free,10,traffic light,634,31.7217,57.9226,31.7137,52.5868,official_validation,measured
+nms_free,11,fire hydrant,101,74.4577,90.4798,82.4696,79.802,official_validation,measured
+nms_free,13,stop sign,75,71.6451,81.2235,75.1347,79.6,official_validation,measured
+nms_free,14,parking meter,60,53.827,67.9143,57.5873,69.0,official_validation,measured
+nms_free,15,bench,411,30.7756,42.5685,33.5761,52.9197,official_validation,measured
+nms_free,16,bird,427,41.4566,61.2967,44.4126,52.9977,official_validation,measured
+nms_free,17,cat,202,75.0024,91.5224,78.8753,84.4554,official_validation,measured
+nms_free,18,dog,218,69.5775,81.0018,75.2518,81.7431,official_validation,measured
+nms_free,19,horse,272,66.3833,86.0047,73.5156,78.6765,official_validation,measured
+nms_free,20,sheep,354,59.7682,81.5128,66.3137,74.6893,official_validation,measured
+nms_free,21,cow,372,62.7641,83.7634,70.8631,75.6452,official_validation,measured
+nms_free,22,elephant,252,71.539,89.683,78.8248,84.246,official_validation,measured
+nms_free,23,bear,71,75.8014,89.7836,82.1332,83.5211,official_validation,measured
+nms_free,24,zebra,266,73.7378,92.2822,81.6382,83.1955,official_validation,measured
+nms_free,25,giraffe,232,73.6584,91.0431,78.6923,83.3621,official_validation,measured
+nms_free,27,backpack,371,18.3583,32.3319,18.6136,53.6388,official_validation,measured
+nms_free,28,umbrella,407,49.3701,69.189,53.1339,66.1671,official_validation,measured
+nms_free,31,handbag,540,20.7768,34.9098,21.693,52.0926,official_validation,measured
+nms_free,32,tie,252,39.2063,59.0225,43.0832,54.4841,official_validation,measured
+nms_free,33,suitcase,299,51.2864,72.638,55.5852,70.2007,official_validation,measured
+nms_free,34,frisbee,115,71.4943,90.1323,84.3445,79.0435,official_validation,measured
+nms_free,35,skis,241,30.5563,53.3781,28.9184,53.195,official_validation,measured
+nms_free,36,snowboard,69,46.3982,60.7495,52.1743,66.5217,official_validation,measured
+nms_free,37,sports ball,260,48.9763,67.786,57.0391,56.9231,official_validation,measured
+nms_free,38,kite,327,49.7522,69.5647,56.808,66.789,official_validation,measured
+nms_free,39,baseball bat,145,43.1738,65.8434,47.9413,64.0,official_validation,measured
+nms_free,40,baseball glove,148,43.3487,69.3225,45.7744,58.1081,official_validation,measured
+nms_free,41,skateboard,179,60.9734,81.8009,67.8,70.3911,official_validation,measured
+nms_free,42,surfboard,267,44.0288,66.3987,47.5735,60.7116,official_validation,measured
+nms_free,43,tennis racket,225,60.2718,83.9056,66.9644,74.4,official_validation,measured
+nms_free,44,bottle,1013,44.201,63.4112,50.1518,64.8174,official_validation,measured
+nms_free,46,wine glass,341,43.3018,64.4517,44.8554,61.8182,official_validation,measured
+nms_free,47,cup,895,49.2128,65.7941,54.4674,70.5698,official_validation,measured
+nms_free,48,fork,215,42.452,59.4627,45.7177,67.4419,official_validation,measured
+nms_free,49,knife,325,26.0038,41.8247,27.0214,51.2308,official_validation,measured
+nms_free,50,spoon,253,26.9744,38.8233,29.7143,58.3399,official_validation,measured
+nms_free,51,bowl,623,48.3226,62.6252,53.8451,73.0337,official_validation,measured
+nms_free,52,banana,370,28.5859,45.6025,29.4443,59.3514,official_validation,measured
+nms_free,53,apple,236,24.4486,34.6023,26.846,55.4661,official_validation,measured
+nms_free,54,sandwich,177,41.6781,54.9913,47.2956,73.5593,official_validation,measured
+nms_free,55,orange,285,32.6687,42.7723,35.2459,63.5088,official_validation,measured
+nms_free,56,broccoli,312,26.2042,43.9459,26.6447,60.9615,official_validation,measured
+nms_free,57,carrot,365,27.8269,41.5592,29.8382,58.0822,official_validation,measured
+nms_free,58,hot dog,125,45.9103,58.8465,50.6224,67.68,official_validation,measured
+nms_free,59,pizza,284,58.2255,74.8107,63.4118,75.0,official_validation,measured
+nms_free,60,donut,328,57.337,71.0417,63.8531,72.378,official_validation,measured
+nms_free,61,cake,310,46.3911,66.0926,51.217,68.4839,official_validation,measured
+nms_free,62,chair,1771,36.7983,55.5198,39.4733,63.1169,official_validation,measured
+nms_free,63,couch,261,49.034,64.0099,49.7377,77.318,official_validation,measured
+nms_free,64,potted plant,342,31.9844,51.4829,36.8696,60.0292,official_validation,measured
+nms_free,65,bed,163,51.906,68.3306,52.4419,75.8282,official_validation,measured
+nms_free,67,dining table,695,34.9943,48.9551,36.8383,63.2662,official_validation,measured
+nms_free,70,toilet,179,70.7199,86.3652,77.4676,85.6425,official_validation,measured
+nms_free,72,tv,288,62.9221,81.749,70.2405,77.3264,official_validation,measured
+nms_free,73,laptop,231,67.2508,79.0449,73.7397,79.0909,official_validation,measured
+nms_free,74,mouse,106,64.2883,79.2428,74.8978,74.8113,official_validation,measured
+nms_free,75,remote,283,39.1961,58.8131,43.5815,66.0071,official_validation,measured
+nms_free,76,keyboard,153,56.5821,73.9394,61.5746,77.6471,official_validation,measured
+nms_free,77,cell phone,262,41.1154,58.6675,44.9646,62.8244,official_validation,measured
+nms_free,78,microwave,55,65.4185,81.2197,72.2362,79.0909,official_validation,measured
+nms_free,79,oven,143,42.7396,61.5209,44.3203,69.2308,official_validation,measured
+nms_free,80,toaster,9,58.1117,79.0487,57.0576,74.4444,official_validation,measured
+nms_free,81,sink,225,44.1306,64.4914,44.421,68.3111,official_validation,measured
+nms_free,82,refrigerator,126,67.2456,78.89,75.318,80.2381,official_validation,measured
+nms_free,84,book,1129,17.3818,32.4289,15.6969,48.4588,official_validation,measured
+nms_free,85,clock,267,52.7973,74.1854,60.4857,68.4644,official_validation,measured
+nms_free,86,vase,274,43.0446,59.5994,48.7045,66.6788,official_validation,measured
+nms_free,87,scissors,36,37.3936,48.7973,43.1797,51.1111,official_validation,measured
+nms_free,88,teddy bear,190,53.6041,68.8172,56.6818,72.2105,official_validation,measured
+nms_free,89,hair drier,11,7.1497,19.1052,2.4062,41.8182,official_validation,measured
+nms_free,90,toothbrush,57,32.7228,44.6017,36.1712,57.0175,official_validation,measured

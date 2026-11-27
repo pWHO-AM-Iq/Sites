@@ -1,0 +1,24 @@
+{
+  "release": "draft.1",
+  "result_file_written_at": "2026-11-27T19:19:47+09:00",
+  "evaluation_source_commit": "fe236d2bb887abf30b486cfc47eccd1fcb4a223e",
+  "training_source_commit": null,
+  "training_source_status": "Developer handoff archive and saved launch source verified. The upstream reference stored in the checkpoint identifies upstream code only. Original project Git commit remains unknown.",
+  "historical_training_and_evaluation": "origin-training.json",
+  "onnx_conversion_accuracy": "conversion-accuracy.json",
+  "weights_and_inference_hardware": "quality.json#/models",
+  "model_file_hashes": "artifact-audit.json#/models",
+  "dataset_hash": "quality.json#/dataset/annotationsSha256",
+  "runtime_conditions": "runtime/README.md",
+  "runtime_measurements": "../materials/runtime.csv",
+  "runtime_raw_reports_local": "private/product-evaluation/runtime",
+  "quality_environment": {
+    "Python": "3.12.0",
+    "onnxruntime-gpu": "1.22.0",
+    "pycocotools": "2.0.11",
+    "Pillow": "10.2.0",
+    "numpy": "1.26.4",
+    "precision": "FP32; TF32 disabled for AP",
+    "input": "1x3x640x640"
+  }
+}

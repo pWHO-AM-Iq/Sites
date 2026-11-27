@@ -1,0 +1,10 @@
+{
+  "version": "draft.1",
+  "release_date": "2026-11-27",
+  "training_initialization": {
+    "status": "documented_in_received_run_records",
+    "ja": "提供された学習記録では、外部の学習済み重みや学習再開用の重みを使わず、seed 20261103 のランダム初期化から300エポック学習しています。初期重みの独立した保存ファイルと自作学習プロジェクトのGitコミットは不明です。",
+    "en": "The supplied training records document a 300-epoch run from random initialization (seed 20261103), with no external pretrained weights or resume checkpoint. A standalone initial-weight artifact and the original training repository commit are unknown."
+  },
+  "distribution_status": "pending"
+}
